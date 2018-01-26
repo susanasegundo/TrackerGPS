@@ -1,4 +1,6 @@
 # TRACER GPS
+GRUPO B
+TRACER GPS 
 
 QUE VA A HACER LA APLICACIÓN:
 ________________________________

@@ -1,0 +1,436 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2C194E70201761A2005AD928 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C194E6F201761A2005AD928 /* GoogleService-Info.plist */; };
+		2C1D437E201774E200F58178 /* VistaInicio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1D437D201774E200F58178 /* VistaInicio.swift */; };
+		2C1D4380201774F400F58178 /* VistaEleccion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1D437F201774F400F58178 /* VistaEleccion.swift */; };
+		2C1D4384201793AD00F58178 /* VistaMapa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1D4383201793AD00F58178 /* VistaMapa.swift */; };
+		2C28D423201B81DA007700B3 /* VistaHistorial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C28D422201B81DA007700B3 /* VistaHistorial.swift */; };
+		2C28D425201B820D007700B3 /* CeldaHistorial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C28D424201B820D007700B3 /* CeldaHistorial.swift */; };
+		2C3D4DA02011659100B30409 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3D4D9F2011659100B30409 /* AppDelegate.swift */; };
+		2C3D4DA52011659100B30409 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C3D4DA32011659100B30409 /* Main.storyboard */; };
+		2C3D4DA72011659100B30409 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C3D4DA62011659100B30409 /* Assets.xcassets */; };
+		2C3D4DAA2011659100B30409 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C3D4DA82011659100B30409 /* LaunchScreen.storyboard */; };
+		2CEBBD6C201B84BD00189B1B /* VistaMarchando.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEBBD6B201B84BD00189B1B /* VistaMarchando.swift */; };
+		DC65C6B504D2A6A9C3F75852 /* Pods_TrackerGPS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5EAC5A6F569229CF0E42AC4 /* Pods_TrackerGPS.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2C194E6F201761A2005AD928 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2C1D437D201774E200F58178 /* VistaInicio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VistaInicio.swift; sourceTree = "<group>"; };
+		2C1D437F201774F400F58178 /* VistaEleccion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VistaEleccion.swift; sourceTree = "<group>"; };
+		2C1D4383201793AD00F58178 /* VistaMapa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VistaMapa.swift; sourceTree = "<group>"; };
+		2C28D422201B81DA007700B3 /* VistaHistorial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VistaHistorial.swift; sourceTree = "<group>"; };
+		2C28D424201B820D007700B3 /* CeldaHistorial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CeldaHistorial.swift; sourceTree = "<group>"; };
+		2C3D4D9C2011659100B30409 /* TrackerGPS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrackerGPS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C3D4D9F2011659100B30409 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2C3D4DA42011659100B30409 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2C3D4DA62011659100B30409 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2C3D4DA92011659100B30409 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2C3D4DAB2011659100B30409 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CEBBD6B201B84BD00189B1B /* VistaMarchando.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VistaMarchando.swift; sourceTree = "<group>"; };
+		A7802CE188FD9F1C23B53FE8 /* Pods-TrackerGPS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrackerGPS.release.xcconfig"; path = "Pods/Target Support Files/Pods-TrackerGPS/Pods-TrackerGPS.release.xcconfig"; sourceTree = "<group>"; };
+		C5EAC5A6F569229CF0E42AC4 /* Pods_TrackerGPS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrackerGPS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E039CCF5587BD37353B72005 /* Pods-TrackerGPS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrackerGPS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TrackerGPS/Pods-TrackerGPS.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2C3D4D992011659100B30409 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC65C6B504D2A6A9C3F75852 /* Pods_TrackerGPS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2C3D4D932011659100B30409 = {
+			isa = PBXGroup;
+			children = (
+				2C3D4D9E2011659100B30409 /* TrackerGPS */,
+				2C3D4D9D2011659100B30409 /* Products */,
+				5D77D04E65334CA19FBB25B9 /* Pods */,
+				D4986676F5B59A97D23464A3 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2C3D4D9D2011659100B30409 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2C3D4D9C2011659100B30409 /* TrackerGPS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2C3D4D9E2011659100B30409 /* TrackerGPS */ = {
+			isa = PBXGroup;
+			children = (
+				2C194E6F201761A2005AD928 /* GoogleService-Info.plist */,
+				2C3D4D9F2011659100B30409 /* AppDelegate.swift */,
+				2C3D4DA32011659100B30409 /* Main.storyboard */,
+				2C3D4DA62011659100B30409 /* Assets.xcassets */,
+				2C3D4DA82011659100B30409 /* LaunchScreen.storyboard */,
+				2C3D4DAB2011659100B30409 /* Info.plist */,
+				2C1D437D201774E200F58178 /* VistaInicio.swift */,
+				2C1D437F201774F400F58178 /* VistaEleccion.swift */,
+				2C28D422201B81DA007700B3 /* VistaHistorial.swift */,
+				2C28D424201B820D007700B3 /* CeldaHistorial.swift */,
+				2C1D4383201793AD00F58178 /* VistaMapa.swift */,
+				2CEBBD6B201B84BD00189B1B /* VistaMarchando.swift */,
+			);
+			path = TrackerGPS;
+			sourceTree = "<group>";
+		};
+		5D77D04E65334CA19FBB25B9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E039CCF5587BD37353B72005 /* Pods-TrackerGPS.debug.xcconfig */,
+				A7802CE188FD9F1C23B53FE8 /* Pods-TrackerGPS.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D4986676F5B59A97D23464A3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C5EAC5A6F569229CF0E42AC4 /* Pods_TrackerGPS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2C3D4D9B2011659100B30409 /* TrackerGPS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2C3D4DAE2011659100B30409 /* Build configuration list for PBXNativeTarget "TrackerGPS" */;
+			buildPhases = (
+				F850B9E50BE2A42D4EAB8ED9 /* [CP] Check Pods Manifest.lock */,
+				2C3D4D982011659100B30409 /* Sources */,
+				2C3D4D992011659100B30409 /* Frameworks */,
+				2C3D4D9A2011659100B30409 /* Resources */,
+				AEF117A030C9C0638864877E /* [CP] Embed Pods Frameworks */,
+				D13EA09DFA20273B0B54A87B /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TrackerGPS;
+			productName = TrackerGPS;
+			productReference = 2C3D4D9C2011659100B30409 /* TrackerGPS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2C3D4D942011659100B30409 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "iñaki";
+				TargetAttributes = {
+					2C3D4D9B2011659100B30409 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 2C3D4D972011659100B30409 /* Build configuration list for PBXProject "TrackerGPS" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2C3D4D932011659100B30409;
+			productRefGroup = 2C3D4D9D2011659100B30409 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2C3D4D9B2011659100B30409 /* TrackerGPS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2C3D4D9A2011659100B30409 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C3D4DAA2011659100B30409 /* LaunchScreen.storyboard in Resources */,
+				2C194E70201761A2005AD928 /* GoogleService-Info.plist in Resources */,
+				2C3D4DA72011659100B30409 /* Assets.xcassets in Resources */,
+				2C3D4DA52011659100B30409 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AEF117A030C9C0638864877E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TrackerGPS/Pods-TrackerGPS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TrackerGPS/Pods-TrackerGPS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D13EA09DFA20273B0B54A87B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TrackerGPS/Pods-TrackerGPS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F850B9E50BE2A42D4EAB8ED9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TrackerGPS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2C3D4D982011659100B30409 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C1D437E201774E200F58178 /* VistaInicio.swift in Sources */,
+				2C3D4DA02011659100B30409 /* AppDelegate.swift in Sources */,
+				2C1D4380201774F400F58178 /* VistaEleccion.swift in Sources */,
+				2C1D4384201793AD00F58178 /* VistaMapa.swift in Sources */,
+				2CEBBD6C201B84BD00189B1B /* VistaMarchando.swift in Sources */,
+				2C28D423201B81DA007700B3 /* VistaHistorial.swift in Sources */,
+				2C28D425201B820D007700B3 /* CeldaHistorial.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2C3D4DA32011659100B30409 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2C3D4DA42011659100B30409 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2C3D4DA82011659100B30409 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2C3D4DA92011659100B30409 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2C3D4DAC2011659100B30409 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2C3D4DAD2011659100B30409 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2C3D4DAF2011659100B30409 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E039CCF5587BD37353B72005 /* Pods-TrackerGPS.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7M2NE9V99T;
+				INFOPLIST_FILE = TrackerGPS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = egibide.TrackerGPS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2C3D4DB02011659100B30409 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7802CE188FD9F1C23B53FE8 /* Pods-TrackerGPS.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7M2NE9V99T;
+				INFOPLIST_FILE = TrackerGPS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = egibide.TrackerGPS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2C3D4D972011659100B30409 /* Build configuration list for PBXProject "TrackerGPS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C3D4DAC2011659100B30409 /* Debug */,
+				2C3D4DAD2011659100B30409 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2C3D4DAE2011659100B30409 /* Build configuration list for PBXNativeTarget "TrackerGPS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C3D4DAF2011659100B30409 /* Debug */,
+				2C3D4DB02011659100B30409 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2C3D4D942011659100B30409 /* Project object */;
+}
