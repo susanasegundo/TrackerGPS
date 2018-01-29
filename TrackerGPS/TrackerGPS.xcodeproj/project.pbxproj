@@ -17,6 +17,8 @@
 		2C3D4DA52011659100B30409 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C3D4DA32011659100B30409 /* Main.storyboard */; };
 		2C3D4DA72011659100B30409 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C3D4DA62011659100B30409 /* Assets.xcassets */; };
 		2C3D4DAA2011659100B30409 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C3D4DA82011659100B30409 /* LaunchScreen.storyboard */; };
+		2C464980201E3F3800EAA36F /* Recorrido.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C46497F201E3F3800EAA36F /* Recorrido.swift */; };
+		2C464982201E473400EAA36F /* PuntosDeGeolocalizacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C464981201E473400EAA36F /* PuntosDeGeolocalizacion.swift */; };
 		2CEBBD6C201B84BD00189B1B /* VistaMarchando.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEBBD6B201B84BD00189B1B /* VistaMarchando.swift */; };
 		DC65C6B504D2A6A9C3F75852 /* Pods_TrackerGPS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5EAC5A6F569229CF0E42AC4 /* Pods_TrackerGPS.framework */; };
 /* End PBXBuildFile section */
@@ -34,6 +36,8 @@
 		2C3D4DA62011659100B30409 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C3D4DA92011659100B30409 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C3D4DAB2011659100B30409 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C46497F201E3F3800EAA36F /* Recorrido.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recorrido.swift; sourceTree = "<group>"; };
+		2C464981201E473400EAA36F /* PuntosDeGeolocalizacion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuntosDeGeolocalizacion.swift; sourceTree = "<group>"; };
 		2CEBBD6B201B84BD00189B1B /* VistaMarchando.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VistaMarchando.swift; sourceTree = "<group>"; };
 		A7802CE188FD9F1C23B53FE8 /* Pods-TrackerGPS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrackerGPS.release.xcconfig"; path = "Pods/Target Support Files/Pods-TrackerGPS/Pods-TrackerGPS.release.xcconfig"; sourceTree = "<group>"; };
 		C5EAC5A6F569229CF0E42AC4 /* Pods_TrackerGPS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrackerGPS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,6 +89,8 @@
 				2C28D424201B820D007700B3 /* CeldaHistorial.swift */,
 				2C1D4383201793AD00F58178 /* VistaMapa.swift */,
 				2CEBBD6B201B84BD00189B1B /* VistaMarchando.swift */,
+				2C46497F201E3F3800EAA36F /* Recorrido.swift */,
+				2C464981201E473400EAA36F /* PuntosDeGeolocalizacion.swift */,
 			);
 			path = TrackerGPS;
 			sourceTree = "<group>";
@@ -185,12 +191,28 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-TrackerGPS/Pods-TrackerGPS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -241,6 +263,8 @@
 				2C1D437E201774E200F58178 /* VistaInicio.swift in Sources */,
 				2C3D4DA02011659100B30409 /* AppDelegate.swift in Sources */,
 				2C1D4380201774F400F58178 /* VistaEleccion.swift in Sources */,
+				2C464980201E3F3800EAA36F /* Recorrido.swift in Sources */,
+				2C464982201E473400EAA36F /* PuntosDeGeolocalizacion.swift in Sources */,
 				2C1D4384201793AD00F58178 /* VistaMapa.swift in Sources */,
 				2CEBBD6C201B84BD00189B1B /* VistaMarchando.swift in Sources */,
 				2C28D423201B81DA007700B3 /* VistaHistorial.swift in Sources */,

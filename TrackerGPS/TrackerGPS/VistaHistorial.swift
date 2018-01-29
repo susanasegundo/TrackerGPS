@@ -7,11 +7,30 @@
 //
 
 import UIKit
+import Firebase
+
+var recorridos: [Recorrido]?
+
+let idDeUsuario: String = "001"
+let documentosDelUsuario = db.collection("recorridos")
+let consulta = documentosDelUsuario.whereField("id", isEqualTo: "\(idDeUsuario)")
 
 class VistaHistorial: UITableViewController {
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        //por cada documento dentro de recorridos, mire la id, y la compare con la id del usuario actual.
+        db.collection("recorridos").whereField("id", isEqualTo: 9999).getDocuments() { (querySnapshot, err) in
+            if let err = err{
+                print("Error congiendo el documento: \(err)")
+            }else{
+                for document in querySnapshot!.documents {  
+                    print("\(document.documentID) => \(document.data())")
+                }
+            }
+            
+        }
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false

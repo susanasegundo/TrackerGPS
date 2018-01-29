@@ -7,7 +7,10 @@ target 'TrackerGPS' do
 
   # Pods for TrackerGPS
 
-#pod 'FirebaseCommunity', '~> 0.1'
 pod 'Firebase/Core'
+pod 'Firebase/Firestore'
+pod 'Firebase/Auth'
+pod 'Firebase/Database'
+
 
 end

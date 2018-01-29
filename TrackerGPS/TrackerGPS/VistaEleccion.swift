@@ -7,13 +7,26 @@
 //
 
 import UIKit
+import Firebase
+
 
 class VistaEleccion: UIViewController {
-
+    
+    var idUsuarioAnonimo: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+      
         // Do any additional setup after loading the view.
+        //logearse anonimamente
+        Auth.auth().signInAnonymously(){(user, error) in
+            
+            if  user!.isAnonymous  {
+            self.idUsuarioAnonimo = user!.uid}
+            print("usuario conectado correctamente \(self.idUsuarioAnonimo)")
+        }
+        
+        
     }
 
     override func didReceiveMemoryWarning() {

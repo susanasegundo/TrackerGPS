@@ -165,7 +165,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fecha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Iy-Pf-qDe">
-                                            <rect key="frame" x="82" y="11" width="42" height="21"/>
+                                            <rect key="frame" x="42" y="11" width="82" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -176,11 +176,15 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="ver"/>
                                             <connections>
+                                                <action selector="verAction:" destination="oZC-54-HHx" eventType="touchUpInside" id="bmd-xp-5TL"/>
                                                 <segue destination="gNc-WF-0ze" kind="show" id="8Lb-3P-BLu"/>
                                             </connections>
                                         </button>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="fechaLabel" destination="2Iy-Pf-qDe" id="bdN-Yt-XJR"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -191,7 +195,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YsL-ks-Bcv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2148" y="1058"/>
+            <point key="canvasLocation" x="2148" y="1057.4212893553224"/>
         </scene>
         <!--Vista Marchando-->
         <scene sceneID="Xo0-eU-AY8">
@@ -300,6 +304,6 @@
         <image name="imagenPruebas" width="157" height="118"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Byu-bH-EXl"/>
+        <segue reference="8Lb-3P-BLu"/>
     </inferredMetricsTieBreakers>
 </document>
