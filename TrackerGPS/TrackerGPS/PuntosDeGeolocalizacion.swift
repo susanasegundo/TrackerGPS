@@ -9,6 +9,10 @@
 import Foundation
 
 struct PuntosDeGeolocalizacion {
-    var latitud: Double
-    var longitud: Double
+    var latitud: Double = 0
+    var longitud: Double = 0
+    init(l:Double,ln: Double) {
+        self.latitud = l
+        self.longitud = ln
+    }
 }

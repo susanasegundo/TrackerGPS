@@ -21,6 +21,8 @@ class CeldaHistorial: UITableViewCell {
         // Configure the view for the selected state
     }
     @IBOutlet weak var fechaLabel: UILabel!
+    @IBOutlet weak var fecha2Label: UILabel!
+    @IBOutlet weak var tipoLabel: UILabel!
     
     @IBAction func verAction(_ sender: Any) {
         
