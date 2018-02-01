@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Firebase
 
 class Recorrido{
    /* enum tipos {
@@ -20,12 +21,13 @@ class Recorrido{
     var id: String
     var tipo: String
     
-    var localizaciones = [PuntosDeGeolocalizacion] ()
+    var localizaciones = [GeoPoint] ()
     
-    init(fecha: Date, id: String, tipo: String) {
+    init(fecha: Date, id: String, tipo: String, localizaciones: [GeoPoint]) {
         self.fecha = fecha
         self.id = id
         self.tipo = tipo
+        self.localizaciones = localizaciones
         
     }
 }
