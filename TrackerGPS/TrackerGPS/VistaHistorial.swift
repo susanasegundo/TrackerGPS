@@ -33,6 +33,29 @@ class VistaHistorial: UITableViewController {
                     //con esto tenemos un objeto RECORRIDO con todos los datos del documento
                     //futuro: añadir= Tiempo total de recorrido
                     
+                    var gps = [Any]()
+                    //gps.append(documento["localizaciones"] as? [GeoPoint])
+                    
+                    print("GPS=> \(gps)")
+                    print(gps.count)
+                    //let info = documento["localizaciones"] as? Any
+                    
+                  /*  print("ESTA ES LA INFO =>    \(String(describing: info))")
+                    let hilo: String = info.
+                    print(hilo.substringToIndex())
+                    */
+                    
+                   // var coleccion = [PuntosDeGeolocalizacion]()
+                  //  coleccion.append(documento["localizaciones"] as! PuntosDeGeolocalizacion)
+                    //recorrido.localizaciones.append(coleccion)
+                  //  print(coleccion)
+                    //print("\(coleccion.count) array de geo \(String(describing: coleccion.first))")
+                    
+                   // print(self.recorridos.count )
+                    
+                    //recargar tabla ahora que hay datos
+                    
+                   
                     //añadir recorrido a la matriz
                     self.recorridos.append(recorrido)
                     //recargar tabla ahora que hay datos
