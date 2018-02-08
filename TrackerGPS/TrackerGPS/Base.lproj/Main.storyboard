@@ -368,10 +368,23 @@
             </objects>
             <point key="canvasLocation" x="2516" y="106.59670164917542"/>
         </scene>
-        <!--Mapa-->
+        <!--Navigation Controller-->
+        <scene sceneID="Z1c-Q8-Lph">
+            <objects>
+                <navigationController id="5hy-fh-G9f" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Xr4-RY-wPF">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="221-uv-eiX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3545" y="-253"/>
+        </scene>
+        <!--Vista Result-->
         <scene sceneID="EiR-m8-fs8">
             <objects>
-                <viewController id="0ut-x7-ntf" customClass="VistaMapa" customModule="TrackerGPS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="0ut-x7-ntf" customClass="VistaResult" customModule="TrackerGPS" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="h5W-fc-Mmb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
