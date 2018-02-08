@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+
 let db = Firestore.firestore()//crear db de firestore
 
 @UIApplicationMain

@@ -25,6 +25,7 @@
 		2C464980201E3F3800EAA36F /* Recorrido.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C46497F201E3F3800EAA36F /* Recorrido.swift */; };
 		2C464982201E473400EAA36F /* PuntosDeGeolocalizacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C464981201E473400EAA36F /* PuntosDeGeolocalizacion.swift */; };
 		2CEBBD6C201B84BD00189B1B /* VistaMarchando.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEBBD6B201B84BD00189B1B /* VistaMarchando.swift */; };
+		C141A2092023A79300B1CAFA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C141A2082023A79200B1CAFA /* GoogleService-Info.plist */; };
 		DC65C6B504D2A6A9C3F75852 /* Pods_TrackerGPS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5EAC5A6F569229CF0E42AC4 /* Pods_TrackerGPS.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +51,7 @@
 		2C464981201E473400EAA36F /* PuntosDeGeolocalizacion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuntosDeGeolocalizacion.swift; sourceTree = "<group>"; };
 		2CEBBD6B201B84BD00189B1B /* VistaMarchando.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VistaMarchando.swift; sourceTree = "<group>"; };
 		A7802CE188FD9F1C23B53FE8 /* Pods-TrackerGPS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrackerGPS.release.xcconfig"; path = "Pods/Target Support Files/Pods-TrackerGPS/Pods-TrackerGPS.release.xcconfig"; sourceTree = "<group>"; };
+		C141A2082023A79200B1CAFA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C5EAC5A6F569229CF0E42AC4 /* Pods_TrackerGPS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrackerGPS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E039CCF5587BD37353B72005 /* Pods-TrackerGPS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrackerGPS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TrackerGPS/Pods-TrackerGPS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -89,7 +91,7 @@
 		2C3D4D9E2011659100B30409 /* TrackerGPS */ = {
 			isa = PBXGroup;
 			children = (
-				0221F3022023A3E500230675 /* GoogleService-Info.plist */,
+				C141A2082023A79200B1CAFA /* GoogleService-Info.plist */,
 				2C3D4D9F2011659100B30409 /* AppDelegate.swift */,
 				2C3D4DA32011659100B30409 /* Main.storyboard */,
 				2C3D4DA62011659100B30409 /* Assets.xcassets */,
@@ -195,7 +197,7 @@
 				2C3D4DA72011659100B30409 /* Assets.xcassets in Resources */,
 				2C3D4DA52011659100B30409 /* Main.storyboard in Resources */,
 				0293AAA720238FA7000E4A6C /* Recursos de imagenes in Resources */,
-				0221F3032023A3E500230675 /* GoogleService-Info.plist in Resources */,
+				C141A2092023A79300B1CAFA /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,7 +429,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = WD82W58KAH;
 				INFOPLIST_FILE = TrackerGPS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -444,7 +446,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = WD82W58KAH;
 				INFOPLIST_FILE = TrackerGPS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
