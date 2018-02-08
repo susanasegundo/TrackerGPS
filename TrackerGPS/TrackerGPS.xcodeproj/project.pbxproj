@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02255BC1202CC7CA0042B863 /* VistaDetalles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02255BC0202CC7CA0042B863 /* VistaDetalles.swift */; };
 		0293AAA720238FA7000E4A6C /* Recursos de imagenes in Resources */ = {isa = PBXBuildFile; fileRef = 0293AAA620238FA7000E4A6C /* Recursos de imagenes */; };
 		0293AAA9202391F4000E4A6C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0293AAA8202391F4000E4A6C /* CoreLocation.framework */; };
 		0293AAAB20239204000E4A6C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0293AAAA20239204000E4A6C /* MapKit.framework */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		02255BC0202CC7CA0042B863 /* VistaDetalles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VistaDetalles.swift; sourceTree = "<group>"; };
 		0293AAA620238FA7000E4A6C /* Recursos de imagenes */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Recursos de imagenes"; sourceTree = "<group>"; };
 		0293AAA8202391F4000E4A6C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		0293AAAA20239204000E4A6C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -100,6 +102,7 @@
 				2CEBBD6B201B84BD00189B1B /* VistaMarchando.swift */,
 				2C46497F201E3F3800EAA36F /* Recorrido.swift */,
 				2C464981201E473400EAA36F /* PuntosDeGeolocalizacion.swift */,
+				02255BC0202CC7CA0042B863 /* VistaDetalles.swift */,
 			);
 			path = TrackerGPS;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 				2C1D437E201774E200F58178 /* VistaInicio.swift in Sources */,
 				2C3D4DA02011659100B30409 /* AppDelegate.swift in Sources */,
 				2C1D4380201774F400F58178 /* VistaEleccion.swift in Sources */,
+				02255BC1202CC7CA0042B863 /* VistaDetalles.swift in Sources */,
 				2C464980201E3F3800EAA36F /* Recorrido.swift in Sources */,
 				2C464982201E473400EAA36F /* PuntosDeGeolocalizacion.swift in Sources */,
 				2C1D4384201793AD00F58178 /* VistaMapa.swift in Sources */,
@@ -421,6 +425,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7M2NE9V99T;
 				INFOPLIST_FILE = TrackerGPS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = egibide.TrackerGPS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -437,6 +442,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7M2NE9V99T;
 				INFOPLIST_FILE = TrackerGPS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = egibide.TrackerGPS;
 				PRODUCT_NAME = "$(TARGET_NAME)";

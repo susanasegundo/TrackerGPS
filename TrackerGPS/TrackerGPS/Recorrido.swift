@@ -17,7 +17,11 @@ class Recorrido{
     }*/
     
     var returnFecha: Date! {return TimeZone.current.nextDaylightSavingTimeTransition}//stackOverflow= how to get a users time zone.
-    var fecha: Date!
+    //fecha inicio recorrido
+    var fecha/*Inicio*/: Date!
+    //fecha fin de recorrido
+    //var fechaFin: Date
+    
     var id: String
     var tipo: String
     
