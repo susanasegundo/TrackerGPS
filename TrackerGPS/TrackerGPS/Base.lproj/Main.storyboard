@@ -297,17 +297,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="l1r-Ej-SiT">
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="l1r-Ej-SiT">
                                 <rect key="frame" x="20" y="74" width="335" height="20.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tiempo transcurrido" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="csj-bt-OdH">
-                                        <rect key="frame" x="0.0" y="0.0" width="155" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="206.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="siZ-xD-GWL">
-                                        <rect key="frame" x="180" y="0.0" width="155" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="siZ-xD-GWL">
+                                        <rect key="frame" x="231.5" y="0.0" width="103.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -327,7 +327,10 @@
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aEz-0Z-eSF">
                                         <rect key="frame" x="0.0" y="268" width="375" height="30"/>
-                                        <state key="normal" title="Pausa"/>
+                                        <state key="normal" title="Pausar"/>
+                                        <connections>
+                                            <action selector="pausaBoton:" destination="k0o-Ox-5Kc" eventType="touchUpInside" id="pgT-f2-gQH"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gSL-KI-0ru">
                                         <rect key="frame" x="0.0" y="308" width="375" height="30"/>
@@ -361,7 +364,8 @@
                         <viewLayoutGuide key="safeArea" id="k7b-gA-KwZ"/>
                     </view>
                     <connections>
-                        <outlet property="tiempo" destination="siZ-xD-GWL" id="Pot-6V-qqU"/>
+                        <outlet property="pausaNombre" destination="aEz-0Z-eSF" id="5rO-iJ-lMx"/>
+                        <outlet property="tiempoLabel" destination="siZ-xD-GWL" id="Zn6-yV-VpQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bs5-ZR-1Kh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -417,7 +421,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tlT-CV-U3l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4788" y="582"/>
+            <point key="canvasLocation" x="4790" y="582"/>
         </scene>
     </scenes>
     <resources>
