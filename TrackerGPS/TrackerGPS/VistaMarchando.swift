@@ -9,22 +9,25 @@
 import UIKit
 
 class VistaMarchando: UIViewController {
-
+    var contador = 0
+    var timer = Timer()
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+                
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
-        if( segue.identifier == "aMapa"){
-            let destino = segue.destination as! VistaMapa
-            
-        }
+    
+    
+    
+    @IBOutlet weak var tiempo: UILabel!
+    
+    
 
     /*
     // MARK: - Navigation

@@ -54,7 +54,12 @@ class VistaEleccion: UIViewController,UIPickerViewDataSource, UIPickerViewDelega
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
-        if( segue.identifier == "aPantallaHistorial"){
+        if( segue.identifier == "aEmpezar"){
+            let destino = segue.destination as! VistaMarchando
+            
+            //destino.idUsuario = idUsuarioAnonimo
+            
+        } else if( segue.identifier == "aPantallaHistorial"){
             let destino = segue.destination as! VistaHistorial
             
             destino.idUsuario = idUsuarioAnonimo

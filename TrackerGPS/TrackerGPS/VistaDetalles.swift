@@ -1,19 +1,18 @@
 //
-//  VistaInicio.swift
+//  VistaDetalles.swift
 //  TrackerGPS
 //
-//  Created by iñaki on 23/1/18.
+//  Created by  on 8/2/18.
 //  Copyright © 2018 iñaki. All rights reserved.
 //
 
 import UIKit
 
-class VistaInicio: UIViewController {
+class VistaDetalles: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let fecha = Date.init()
-        print("Fecha y hora actual => " + "\(fecha)")
+
         // Do any additional setup after loading the view.
     }
 
@@ -21,9 +20,7 @@ class VistaInicio: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    @IBAction func volver(segue:UIStoryboardSegue){
-        
-    }
+    
 
     /*
     // MARK: - Navigation
