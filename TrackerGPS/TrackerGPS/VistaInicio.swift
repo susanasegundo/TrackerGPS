@@ -12,8 +12,7 @@ class VistaInicio: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let fecha = Date.init()
-        print("Fecha y hora actual => " + "\(fecha)")
+        
         // Do any additional setup after loading the view.
     }
 
