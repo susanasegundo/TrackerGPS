@@ -20,7 +20,11 @@ class VistaMarchando: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+        if( segue.identifier == "aMapa"){
+            let destino = segue.destination as! VistaMapa
+            
+        }
 
     /*
     // MARK: - Navigation
@@ -32,4 +36,5 @@ class VistaMarchando: UIViewController {
     }
     */
 
+}
 }

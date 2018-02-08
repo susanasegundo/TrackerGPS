@@ -61,6 +61,7 @@ class VistaEleccion: UIViewController,UIPickerViewDataSource, UIPickerViewDelega
             
         }
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

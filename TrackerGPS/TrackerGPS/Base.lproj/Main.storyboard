@@ -337,7 +337,7 @@
                                         <rect key="frame" x="0.0" y="348" width="375" height="30"/>
                                         <state key="normal" title="boton: &quot;VER RESULTADOS&quot;"/>
                                         <connections>
-                                            <segue destination="0ut-x7-ntf" kind="show" id="ebk-iW-t73"/>
+                                            <segue destination="0ut-x7-ntf" kind="show" identifier="aMapa" id="ebk-iW-t73"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -378,33 +378,35 @@
             </objects>
             <point key="canvasLocation" x="3545" y="-253"/>
         </scene>
-        <!--View Controller-->
+        <!--Vista Mapa-->
         <scene sceneID="EiR-m8-fs8">
             <objects>
-                <viewController id="0ut-x7-ntf" sceneMemberID="viewController">
+                <viewController id="0ut-x7-ntf" customClass="VistaMapa" customModule="TrackerGPS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="h5W-fc-Mmb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="WZF-NC-ngQ">
-                                <rect key="frame" x="0.0" y="261" width="375" height="128"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="WZF-NC-ngQ">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Swh-UF-5AB" firstAttribute="trailing" secondItem="WZF-NC-ngQ" secondAttribute="trailing" id="L2G-rH-N4q"/>
-                            <constraint firstItem="WZF-NC-ngQ" firstAttribute="top" secondItem="Swh-UF-5AB" secondAttribute="top" id="NUM-KR-3Er"/>
-                            <constraint firstItem="WZF-NC-ngQ" firstAttribute="centerY" secondItem="h5W-fc-Mmb" secondAttribute="centerY" id="ZhL-K6-Cwy"/>
-                            <constraint firstItem="Swh-UF-5AB" firstAttribute="bottom" secondItem="WZF-NC-ngQ" secondAttribute="bottom" id="g0v-we-Gce"/>
-                            <constraint firstItem="WZF-NC-ngQ" firstAttribute="centerX" secondItem="h5W-fc-Mmb" secondAttribute="centerX" id="ye8-mz-P8Y"/>
-                            <constraint firstItem="WZF-NC-ngQ" firstAttribute="leading" secondItem="Swh-UF-5AB" secondAttribute="leading" id="ywU-H5-3Ea"/>
+                            <constraint firstItem="WZF-NC-ngQ" firstAttribute="top" secondItem="Swh-UF-5AB" secondAttribute="top" id="NcE-mi-IC7"/>
+                            <constraint firstItem="WZF-NC-ngQ" firstAttribute="leading" secondItem="Swh-UF-5AB" secondAttribute="leading" id="ppr-jl-QyP"/>
+                            <constraint firstItem="Swh-UF-5AB" firstAttribute="bottom" secondItem="WZF-NC-ngQ" secondAttribute="bottom" id="vMd-I1-ber"/>
+                            <constraint firstItem="WZF-NC-ngQ" firstAttribute="trailing" secondItem="Swh-UF-5AB" secondAttribute="trailing" id="yYB-SL-YRb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Swh-UF-5AB"/>
                     </view>
+                    <connections>
+                        <outlet property="mapa" destination="WZF-NC-ngQ" id="doO-wQ-ana"/>
+                        <outlet property="view" destination="WZF-NC-ngQ" id="JxD-LX-wAn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5s0-Aq-89L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3767" y="583"/>
+            <point key="canvasLocation" x="4246" y="792"/>
         </scene>
     </scenes>
     <resources>
