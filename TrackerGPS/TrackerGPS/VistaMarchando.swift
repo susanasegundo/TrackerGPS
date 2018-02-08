@@ -9,14 +9,39 @@
 import UIKit
 
 class VistaMarchando: UIViewController {
-    var contador = 0
+    var contadorSegundos = 0
+    var contadorMinutos = 0
+    var contadorHoras = 0
     var timer = Timer()
-    override func viewDidLoad() {
-        super.viewDidLoad()
-                
+    
+    @IBAction func empezar(_ sender: UIButton) {
         
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(VistaMarchando.action), userInfo: nil, repeats: true)
         
     }
+    
+    @IBAction func pausa(_ sender: UIButton) {
+        timer.invalidate()
+    }
+    
+    @IBAction func stop(_ sender: UIButton) {
+        timer.invalidate()
+        contadorSegundos = 0
+    }
+    
+    @IBOutlet weak var tiempo: UILabel!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    @objc func action(){
+        contadorSegundos += 1
+        
+       
+        
+    }
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -24,8 +49,6 @@ class VistaMarchando: UIViewController {
     }
     
     
-    
-    @IBOutlet weak var tiempo: UILabel!
     
     
 
@@ -40,4 +63,4 @@ class VistaMarchando: UIViewController {
     */
 
 }
-}
+

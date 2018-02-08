@@ -315,7 +315,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="5J8-lh-0qZ">
-                                <rect key="frame" x="0.0" y="94.5" width="375" height="378"/>
+                                <rect key="frame" x="0.0" y="94.5" width="375" height="418"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="OxI-eg-WhP">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="258"/>
@@ -327,14 +327,27 @@
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aEz-0Z-eSF">
                                         <rect key="frame" x="0.0" y="268" width="375" height="30"/>
+                                        <state key="normal" title="Empezar"/>
+                                        <connections>
+                                            <action selector="empezar:" destination="k0o-Ox-5Kc" eventType="touchUpInside" id="LHx-Wi-pQe"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yq2-QQ-XXP">
+                                        <rect key="frame" x="0.0" y="308" width="42" height="30"/>
                                         <state key="normal" title="Pausa"/>
+                                        <connections>
+                                            <action selector="pausa:" destination="k0o-Ox-5Kc" eventType="touchUpInside" id="Cfc-FP-qIR"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gSL-KI-0ru">
-                                        <rect key="frame" x="0.0" y="308" width="375" height="30"/>
+                                        <rect key="frame" x="0.0" y="348" width="375" height="30"/>
                                         <state key="normal" title="Stop"/>
+                                        <connections>
+                                            <action selector="stop:" destination="k0o-Ox-5Kc" eventType="touchUpInside" id="PdW-1v-wPy"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="left" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HsY-JO-kbW">
-                                        <rect key="frame" x="0.0" y="348" width="375" height="30"/>
+                                        <rect key="frame" x="0.0" y="388" width="375" height="30"/>
                                         <state key="normal" title="boton: &quot;VER RESULTADOS&quot;"/>
                                         <connections>
                                             <segue destination="0ut-x7-ntf" kind="show" identifier="aMapa" id="ebk-iW-t73"/>
