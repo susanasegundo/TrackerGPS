@@ -15,8 +15,7 @@ import Firebase
 class VistaHistorial: UITableViewController {
 
     var recorridos = [Recorrido]()
-    var idUsuario: String!
-    
+    var idUsuario: String!    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,13 +24,14 @@ class VistaHistorial: UITableViewController {
             if let err = err{
                 print("Error congiendo el documento: \(err)")
             }else{
+
                 for document in querySnapshot!.documents {
                     //por cada documento coger sus valores y guardarlos en variables para mas tarde
-                    
                     let documento = document.data()
-                    let recorrido: Recorrido = Recorrido(fecha: (documento["fecha"] as? Date)!, id: documento["id"] as? String ?? "?", tipo: documento["tipo"] as? String ?? "?")
-                    //recorrido.tipo = documento["tipo"] as? String ?? "?"
-                   // print(recorrido.tipo)
+                    //crear un objeto recorrido y pasarle valores del documento firebase
+                    let recorrido: Recorrido = Recorrido(fecha: (documento["fecha"] as? Date)!, id: documento["id"] as? String ?? "?", tipo: documento["tipo"] as? String ?? "?", localizaciones: documento["localizaciones"] as! [GeoPoint])
+                    //con esto tenemos un objeto RECORRIDO con todos los datos del documento
+                    //futuro: añadir= Tiempo total de recorrido
                     
                     var gps = [Any]()
                     //gps.append(documento["localizaciones"] as? [GeoPoint])
@@ -58,37 +58,15 @@ class VistaHistorial: UITableViewController {
                    
                     //añadir recorrido a la matriz
                     self.recorridos.append(recorrido)
+                    //recargar tabla ahora que hay datos
                     self.tableView.reloadData()
                     
-                   /* var gps: PuntosDeGeolocalizacion = PuntosDeGeolocalizacion(l:0.0,ln:0.0)
-                    gps.latitud = documento["localizaciones"] as? Double ?? 0
-                    gps.longitud = documento["localizaciones"] as? Double ?? 0
-
-                    print(gps)*/
-                    //un bucle para sacar todos los objetos de geolocalizacion. Cada objeto viene en un par latitud:longitud:
-                    
-                    
-                    
-                    
-                 /*   db.collection(document.documentID).getDocuments() { (querySnapshot, err) in
-                        if let err = err{
-                            print("Error congiendo el documento 2: \(err)")
-                        }else{
-                            for document1 in querySnapshot!.documents{
-                                print(document1.data())
-                            }
-                        }
- 
-                    
-                    //print("\(document.documentID) => \(document.data())")
-                }*/
             }
             
         }
             
         }
-
-        
+       
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -104,35 +82,29 @@ class VistaHistorial: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        print("2/3")
-        print(self.recorridos.count)
         return self.recorridos.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "celda", for: indexPath) as! CeldaHistorial
-
-        //dar el formato separado de Fecha y Hora
+        // Configure the cell...
+        //dar el formato separado de Fecha y Hora para poner en cada label
         let fe = recorridos[indexPath.row].fecha
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd-MM-yyyy"
         let myString = dateFormatter.string(from: fe!)
         dateFormatter.dateFormat = "HH:mm:ss"
         let updatedString = dateFormatter.string(from: fe!)
-       
-        
+        //escribir en cada una de ellas
         cell.fechaLabel.text = myString
         cell.fecha2Label.text = updatedString
         cell.tipoLabel.text = recorridos[indexPath.row].tipo
-        // Configure the cell...
-
+        
         return cell
     }
     

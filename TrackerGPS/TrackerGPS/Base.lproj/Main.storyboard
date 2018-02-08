@@ -145,7 +145,7 @@
                                         <color key="backgroundColor" red="0.067628408500000001" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Empezar"/>
                                         <connections>
-                                            <segue destination="k0o-Ox-5Kc" kind="show" id="lYS-01-TL8"/>
+                                            <segue destination="k0o-Ox-5Kc" kind="show" identifier="aEmpezar" id="lYS-01-TL8"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -360,6 +360,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="k7b-gA-KwZ"/>
                     </view>
+                    <connections>
+                        <outlet property="tiempo" destination="siZ-xD-GWL" id="Pot-6V-qqU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bs5-ZR-1Kh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -386,28 +389,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="WZF-NC-ngQ">
-                                <rect key="frame" x="0.0" y="261" width="375" height="128"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="WZF-NC-ngQ">
+                                <rect key="frame" x="0.0" y="134" width="375" height="533"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Swh-UF-5AB" firstAttribute="trailing" secondItem="WZF-NC-ngQ" secondAttribute="trailing" id="L2G-rH-N4q"/>
                             <constraint firstItem="WZF-NC-ngQ" firstAttribute="top" secondItem="Swh-UF-5AB" secondAttribute="top" id="NUM-KR-3Er"/>
-                            <constraint firstItem="WZF-NC-ngQ" firstAttribute="centerY" secondItem="h5W-fc-Mmb" secondAttribute="centerY" id="ZhL-K6-Cwy"/>
                             <constraint firstItem="Swh-UF-5AB" firstAttribute="bottom" secondItem="WZF-NC-ngQ" secondAttribute="bottom" id="g0v-we-Gce"/>
-                            <constraint firstItem="WZF-NC-ngQ" firstAttribute="centerX" secondItem="h5W-fc-Mmb" secondAttribute="centerX" id="ye8-mz-P8Y"/>
                             <constraint firstItem="WZF-NC-ngQ" firstAttribute="leading" secondItem="Swh-UF-5AB" secondAttribute="leading" id="ywU-H5-3Ea"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Swh-UF-5AB"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Mapa" id="JNg-gk-NNb">
+                        <barButtonItem key="rightBarButtonItem" title="Detalles" id="cfp-72-0Kf">
+                            <connections>
+                                <segue destination="NS9-Ai-Ur3" kind="show" id="4gE-tT-uTF"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
-                        <outlet property="mapView" destination="WZF-NC-ngQ" id="0yI-KK-Dpc"/>
+                        <outlet property="mapa" destination="WZF-NC-ngQ" id="ew9-4t-2Vt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5s0-Aq-89L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3767" y="583"/>
+            <point key="canvasLocation" x="3765.5999999999999" y="582.45877061469275"/>
+        </scene>
+        <!--Vista Detalles-->
+        <scene sceneID="iMD-uk-eHY">
+            <objects>
+                <viewController id="NS9-Ai-Ur3" customClass="VistaDetalles" customModule="TrackerGPS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4ZX-T2-QxY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="DG6-Yw-uYJ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tlT-CV-U3l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4788" y="582"/>
         </scene>
     </scenes>
     <resources>
