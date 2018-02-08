@@ -34,7 +34,7 @@ class VistaHistorial: UITableViewController {
                    // print(recorrido.tipo)
                     
                     var gps = [Any]()
-                    gps.append(documento["localizaciones"] as? [GeoPoint])
+                    //gps.append(documento["localizaciones"] as? [GeoPoint])
                     
                     print("GPS=> \(gps)")
                     print(gps.count)
