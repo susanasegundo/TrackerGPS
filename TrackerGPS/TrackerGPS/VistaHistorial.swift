@@ -14,6 +14,7 @@ import Firebase
 
 class VistaHistorial: UITableViewController {
 
+    let secciones = ["Seccion 1"]
     var recorridos = [Recorrido]()
     var idUsuario: String!    
     
@@ -35,11 +36,13 @@ class VistaHistorial: UITableViewController {
                     
                     //añadir recorrido a la matriz
                     self.recorridos.append(recorrido)
-                    //recargar tabla ahora que hay datos
-                    self.tableView.reloadData()
+                    
                     
             }
-            
+                //recargar tabla ahora que hay datos
+                self.tableView.reloadData()
+                
+                
         }
             
         }
@@ -59,7 +62,7 @@ class VistaHistorial: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return secciones.count
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -81,6 +84,7 @@ class VistaHistorial: UITableViewController {
         cell.fechaLabel.text = myString
         cell.fecha2Label.text = updatedString
         cell.tipoLabel.text = recorridos[indexPath.row].tipo
+        
         
         return cell
     }

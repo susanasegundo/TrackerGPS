@@ -11,6 +11,7 @@
 		0293AAA720238FA7000E4A6C /* Recursos de imagenes in Resources */ = {isa = PBXBuildFile; fileRef = 0293AAA620238FA7000E4A6C /* Recursos de imagenes */; };
 		0293AAA9202391F4000E4A6C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0293AAA8202391F4000E4A6C /* CoreLocation.framework */; };
 		0293AAAB20239204000E4A6C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0293AAAA20239204000E4A6C /* MapKit.framework */; };
+		2C18F62C202DFE5200D3A908 /* pisadas1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2C18F62B202DFE5100D3A908 /* pisadas1.gif */; };
 		2C194E70201761A2005AD928 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C194E6F201761A2005AD928 /* GoogleService-Info.plist */; };
 		2C1D437E201774E200F58178 /* VistaInicio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1D437D201774E200F58178 /* VistaInicio.swift */; };
 		2C1D4380201774F400F58178 /* VistaEleccion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1D437F201774F400F58178 /* VistaEleccion.swift */; };
@@ -32,6 +33,7 @@
 		0293AAA620238FA7000E4A6C /* Recursos de imagenes */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Recursos de imagenes"; sourceTree = "<group>"; };
 		0293AAA8202391F4000E4A6C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		0293AAAA20239204000E4A6C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		2C18F62B202DFE5100D3A908 /* pisadas1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = pisadas1.gif; path = "Recursos de imagenes/pisadas1.gif"; sourceTree = "<group>"; };
 		2C194E6F201761A2005AD928 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2C1D437D201774E200F58178 /* VistaInicio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VistaInicio.swift; sourceTree = "<group>"; };
 		2C1D437F201774F400F58178 /* VistaEleccion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VistaEleccion.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 		2C3D4D9E2011659100B30409 /* TrackerGPS */ = {
 			isa = PBXGroup;
 			children = (
+				2C18F62B202DFE5100D3A908 /* pisadas1.gif */,
 				2C194E6F201761A2005AD928 /* GoogleService-Info.plist */,
 				2C3D4D9F2011659100B30409 /* AppDelegate.swift */,
 				2C3D4DA32011659100B30409 /* Main.storyboard */,
@@ -190,6 +193,7 @@
 			files = (
 				2C3D4DAA2011659100B30409 /* LaunchScreen.storyboard in Resources */,
 				2C194E70201761A2005AD928 /* GoogleService-Info.plist in Resources */,
+				2C18F62C202DFE5200D3A908 /* pisadas1.gif in Resources */,
 				2C3D4DA72011659100B30409 /* Assets.xcassets in Resources */,
 				2C3D4DA52011659100B30409 /* Main.storyboard in Resources */,
 				0293AAA720238FA7000E4A6C /* Recursos de imagenes in Resources */,

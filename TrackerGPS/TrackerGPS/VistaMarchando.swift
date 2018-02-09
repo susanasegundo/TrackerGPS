@@ -10,6 +10,8 @@ import UIKit
 
 class VistaMarchando: UIViewController {
     
+    var fechaInicio: Date = Date()
+    
     //tema timer contador => https://medium.com/ios-os-x-development/build-an-stopwatch-with-swift-3-0-c7040818a10f
     var contador = 0
     var tiempo = Timer()
@@ -59,12 +61,69 @@ class VistaMarchando: UIViewController {
         }
     }
     
+    //Boton STOP
+    @IBAction func stopBoton(_ sender: Any) {
+        //Se va a mostrar un mensaje de alerta
+        tiempo.invalidate()
+        var vControl = 0
+       
+        
+        let defaultAction = UIAlertAction(title: "Aceptar", style: .default){
+            (action) in
+            //que ocurre
+                //self.pausaNombre.isEnabled = false
+            vControl = 1
+            print("aceptar")
+            if vControl == 1 {
+                print("Prepare segue")
+                //que se ejecute el segue
+                self.performSegue(withIdentifier: "aMapa", sender: self)
+            }
+        }
+        
+        
+        let cancelAction = UIAlertAction(title: "Cancelar", style: .cancel){
+            (action) in
+            //respond to user selection of the action
+            self.runTimer()
+            print("cancelar")
+            
+        }
+        
+        //crear y configurar el controlador de alerta
+        let alert = UIAlertController(title: "¿Está usted seguro de querer acabar el recorrido?", message: """
+        Aceptar para finalizar y ver el Mapa.
+        Cancelar para seguir con el recorrido.
+        """
+            ,  preferredStyle: .alert )
+        alert.addAction(defaultAction)
+        alert.addAction(cancelAction)
+        
+        //para que salga el mensaje o se "presente" en pantalla
+        self.present(alert,animated: true)
+        
+        
+        
+        
+        
+        
+    
+        
+        }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+        if( segue.identifier == "aMapa"){
+            let destino = segue.destination as! VistaMapa
+            
+            //destino.idUsuario = idUsuarioAnonimo
+            
+        }else{}
     
 
     /*
@@ -77,4 +136,5 @@ class VistaMarchando: UIViewController {
     }
     */
 
+}
 }
