@@ -11,10 +11,11 @@ import MapKit
 
 class VistaResult: UIViewController, MKMapViewDelegate {
     @IBOutlet var mapView: MKMapView!
-    override func viewDidLoad() {
+    override func viewDidLoad() {	
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         addAnotations()
+        
     }
 
     override func didReceiveMemoryWarning() {

@@ -333,7 +333,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yq2-QQ-XXP">
-                                        <rect key="frame" x="0.0" y="308" width="42" height="30"/>
+                                        <rect key="frame" x="0.0" y="308" width="375" height="30"/>
                                         <state key="normal" title="Pausa"/>
                                         <connections>
                                             <action selector="pausa:" destination="k0o-Ox-5Kc" eventType="touchUpInside" id="Cfc-FP-qIR"/>
@@ -356,6 +356,7 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="HsY-JO-kbW" firstAttribute="centerX" secondItem="5J8-lh-0qZ" secondAttribute="centerX" id="20K-1U-8Ku"/>
+                                    <constraint firstAttribute="trailing" secondItem="Yq2-QQ-XXP" secondAttribute="trailing" id="4aW-fy-cD8"/>
                                     <constraint firstItem="gSL-KI-0ru" firstAttribute="centerX" secondItem="5J8-lh-0qZ" secondAttribute="centerX" id="Bqr-xt-Xaf"/>
                                     <constraint firstItem="OxI-eg-WhP" firstAttribute="centerX" secondItem="5J8-lh-0qZ" secondAttribute="centerX" id="DwY-y4-6o8"/>
                                     <constraint firstItem="aEz-0Z-eSF" firstAttribute="centerX" secondItem="5J8-lh-0qZ" secondAttribute="centerX" id="Jss-dO-AiK"/>
@@ -394,7 +395,7 @@
             </objects>
             <point key="canvasLocation" x="3545" y="-253"/>
         </scene>
-        <!--Vista Result-->
+        <!--Mapa-->
         <scene sceneID="EiR-m8-fs8">
             <objects>
                 <viewController id="0ut-x7-ntf" customClass="VistaResult" customModule="TrackerGPS" sceneMemberID="viewController">
@@ -423,7 +424,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="mapa" destination="WZF-NC-ngQ" id="ew9-4t-2Vt"/>
+                        <outlet property="mapView" destination="WZF-NC-ngQ" id="QJu-1n-o7M"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5s0-Aq-89L" userLabel="First Responder" sceneMemberID="firstResponder"/>
