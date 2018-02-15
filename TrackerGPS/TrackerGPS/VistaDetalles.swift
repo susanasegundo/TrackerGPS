@@ -10,10 +10,12 @@ import UIKit
 
 class VistaDetalles: UIViewController {
 
+    var recorrido: Recorrido = Recorrido()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        print(recorrido.fechaInicio, recorrido.tiempoT)
     }
 
     override func didReceiveMemoryWarning() {

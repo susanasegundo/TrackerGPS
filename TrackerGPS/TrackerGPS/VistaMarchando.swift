@@ -7,19 +7,20 @@
 //
 
 import UIKit
+import Firebase
 
 class VistaMarchando: UIViewController {
-    
-    var fechaInicio: Date = Date()
+    //variable recorrido
+    var recorrido: Recorrido = Recorrido()
+    var localizacionesArray: [GeoPoint] = [GeoPoint(latitude: 0, longitude: 0)]//init por defecto, se sobreescribe en el segue.
     
     //tema timer contador => https://medium.com/ios-os-x-development/build-an-stopwatch-with-swift-3-0-c7040818a10f
-    var contador = 0
+    var contador = 0.0
     var tiempo = Timer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         runTimer()
-        
     }
     
     //funcion para bucle contador, sume mas 1
@@ -103,12 +104,6 @@ class VistaMarchando: UIViewController {
         self.present(alert,animated: true)
         
         
-        
-        
-        
-        
-    
-        
         }
     
     
@@ -119,9 +114,19 @@ class VistaMarchando: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         if( segue.identifier == "aMapa"){
-            let destino = segue.destination as! VistaMapa
+            let destino = segue.destination as! VistaResult
             
-            //destino.idUsuario = idUsuarioAnonimo
+            //tenemos el array de localizaciones
+            recorrido.localizaciones = localizacionesArray
+            //la fecha de que acaba.
+            recorrido.fechaFin = Date.init()
+            //el tiempo que ha tardado, por ahora lo cojo del tiempo.
+            recorrido.tiempoT = contador //pasa solo los segundos ADVERTENCIA.
+            
+            
+            //pasar al destino el recorrido
+            destino.recorrido = self.recorrido
+            
             
         }else{}
     

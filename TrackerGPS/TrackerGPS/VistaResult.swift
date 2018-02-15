@@ -8,8 +8,12 @@
 
 import UIKit
 import MapKit
+import Firebase
 
 class VistaResult: UIViewController, MKMapViewDelegate {
+    
+    var recorrido: Recorrido = Recorrido()
+    
     @IBOutlet var mapView: MKMapView!
     override func viewDidLoad() {	
         super.viewDidLoad()
@@ -18,6 +22,32 @@ class VistaResult: UIViewController, MKMapViewDelegate {
         
     }
 
+    
+    
+    
+    //subir a firebase
+    func subirAFirebase() {
+        
+        //recorrido a subir
+        var ref: DocumentReference? = nil
+        ref = db.collection("recorridos").addDocument(data: [
+            "fechaInicio": recorrido.fechaInicio,
+            "fechaFin": recorrido.fechaFin,
+            "tiempoT": recorrido.tiempoT,
+            "id": recorrido.id,
+            "tipo": recorrido.tipo,
+            "localizaciones": recorrido.localizaciones
+        ]) { err in
+            if let err = err {
+                print("Error adding document: \(err)")
+            } else {
+                print("Document added with ID: \(ref!.documentID)")
+            }
+        }
+    }
+    
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -44,7 +74,7 @@ class VistaResult: UIViewController, MKMapViewDelegate {
         mapView.centerCoordinate = coords2
     
         mapView(mapView, rendererFor: polyline)
-        //procesar("Hola")
+        
     }
     
     /*func procesar ( _ persona:String ) {
@@ -62,14 +92,20 @@ class VistaResult: UIViewController, MKMapViewDelegate {
         //return MKOverlayRenderer()
     }
     
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if( segue.identifier == "aDetalles"){
+            let destino = segue.destination as! VistaDetalles
+            
+            //pasar al destino el recorrido
+            destino.recorrido = self.recorrido
+            
+            
+        }else{}
     }
-    */
+    
 
 }

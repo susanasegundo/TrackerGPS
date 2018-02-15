@@ -14,9 +14,12 @@ import Firebase
 
 class VistaHistorial: UITableViewController {
 
-    let secciones = ["Seccion 1"]
+    let secciones = ["Fecha Inicio     Actividad"]
+    //array de recorridos para mostrar en la tabla
     var recorridos = [Recorrido]()
-    var idUsuario: String!    
+    var idUsuario: String!
+    //el recorrido que se usa para meter al recorridos, y para pasar por el segue
+    var recorrido: Recorrido = Recorrido()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,12 +33,12 @@ class VistaHistorial: UITableViewController {
                     //por cada documento coger sus valores y guardarlos en variables para mas tarde
                     let documento = document.data()
                     //crear un objeto recorrido y pasarle valores del documento firebase
-                    let recorrido: Recorrido = Recorrido(fechaI: (documento["fechaInicio"] as? Date)!,fechaF: (documento["fechaFin"] as? Date)!,t: (documento["tiempoT"] as? Double!)!, id: documento["id"] as? String ?? "?", tipo: documento["tipo"] as? String ?? "?", localizaciones: documento["localizaciones"] as! [GeoPoint])
+                     self.recorrido = Recorrido(fechaI: (documento["fechaInicio"] as? Date)!,fechaF: (documento["fechaFin"] as? Date)!,t: (documento["tiempoT"] as? Double!)!, id: documento["id"] as? String ?? "?", tipo: documento["tipo"] as? String ?? "?", localizaciones: documento["localizaciones"] as! [GeoPoint])
                     //con esto tenemos un objeto RECORRIDO con todos los datos del documento
                     //futuro: añadir= Tiempo total de recorrido
                     
                     //añadir recorrido a la matriz
-                    self.recorridos.append(recorrido)
+                    self.recorridos.append(self.recorrido)
                     
                     
             }
@@ -89,6 +92,9 @@ class VistaHistorial: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return secciones[section]
+    }
 
     /*
     // Override to support conditional editing of the table view.
@@ -125,14 +131,21 @@ class VistaHistorial: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if( segue.identifier == "aMapa"){
+            let destino = segue.destination as! VistaResult
+            
+            //pasar al destino el recorrido
+            destino.recorrido = self.recorrido
+            
+            
+        }else{}
+        
     }
-    */
+    
 
 }

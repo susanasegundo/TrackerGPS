@@ -104,11 +104,11 @@
 				2C28D422201B81DA007700B3 /* VistaHistorial.swift */,
 				2C28D424201B820D007700B3 /* CeldaHistorial.swift */,
 				2CEBBD6B201B84BD00189B1B /* VistaMarchando.swift */,
+				0275DB17203613D300C050F0 /* VistaResult.swift */,
+				02255BC0202CC7CA0042B863 /* VistaDetalles.swift */,
 				2C1D4383201793AD00F58178 /* VistaMapa.swift */,
 				2C46497F201E3F3800EAA36F /* Recorrido.swift */,
 				2C464981201E473400EAA36F /* PuntosDeGeolocalizacion.swift */,
-				02255BC0202CC7CA0042B863 /* VistaDetalles.swift */,
-				0275DB17203613D300C050F0 /* VistaResult.swift */,
 			);
 			path = TrackerGPS;
 			sourceTree = "<group>";

@@ -26,13 +26,22 @@ class Recorrido{
     
     var localizaciones = [GeoPoint] ()
     
-    init(fechaI: Date,fechaF: Date,t: Double, id: String, tipo: String, localizaciones: [GeoPoint]) {
-        self.fechaInicio = fechaI
-        self.fechaFin = fechaF
-        self.tiempoT = t
-        self.id = id
-        self.tipo = tipo
-        self.localizaciones = localizaciones
+    init() {//por defecto, que de primeras estan mal
+        self.fechaInicio = Date.init()
+        self.fechaFin = Date.init()
+        self.tiempoT = -1
+        self.id = ""
+        self.tipo = ""
+        self.localizaciones = [GeoPoint(latitude: 0, longitude: 0)]
+    }
+    
+    init(fechaI: Date?,fechaF: Date?,t: Double?, id: String?, tipo: String?, localizaciones: [GeoPoint]?) {
+        self.fechaInicio = fechaI!
+        self.fechaFin = fechaF!
+        self.tiempoT = t!
+        self.id = id!
+        self.tipo = tipo!
+        self.localizaciones = localizaciones!
         
     }
 }

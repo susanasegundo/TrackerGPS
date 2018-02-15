@@ -241,7 +241,7 @@
                                                             <state key="normal" title="Ver"/>
                                                             <connections>
                                                                 <action selector="verAction:" destination="oZC-54-HHx" eventType="touchUpInside" id="bmd-xp-5TL"/>
-                                                                <segue destination="0ut-x7-ntf" kind="show" id="oJa-5F-hul"/>
+                                                                <segue destination="0ut-x7-ntf" kind="show" identifier="aMapa" id="oJa-5F-hul"/>
                                                             </connections>
                                                         </button>
                                                     </subviews>
@@ -422,18 +422,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bs5-ZR-1Kh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2516" y="106.59670164917542"/>
+            <point key="canvasLocation" x="2510" y="105"/>
         </scene>
         <!--Mapa-->
         <scene sceneID="EiR-m8-fs8">
             <objects>
-                <viewController id="0ut-x7-ntf" customClass="VistaMapa" customModule="TrackerGPS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="0ut-x7-ntf" customClass="VistaResult" customModule="TrackerGPS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="h5W-fc-Mmb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="WZF-NC-ngQ">
-                                <rect key="frame" x="0.0" y="134" width="375" height="533"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="WZF-NC-ngQ">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -448,12 +448,12 @@
                     <navigationItem key="navigationItem" title="Mapa" id="JNg-gk-NNb">
                         <barButtonItem key="rightBarButtonItem" title="Detalles" id="cfp-72-0Kf">
                             <connections>
-                                <segue destination="NS9-Ai-Ur3" kind="show" id="4gE-tT-uTF"/>
+                                <segue destination="NS9-Ai-Ur3" kind="show" identifier="aDetalles" id="4gE-tT-uTF"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="mapa" destination="WZF-NC-ngQ" id="ew9-4t-2Vt"/>
+                        <outlet property="mapView" destination="WZF-NC-ngQ" id="8Hm-tq-mXh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5s0-Aq-89L" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -481,6 +481,6 @@
         <image name="pisadas1.gif" width="550" height="400"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="yST-Up-IJe"/>
+        <segue reference="oJa-5F-hul"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -17,10 +17,17 @@ class VistaEleccion: UIViewController,UIPickerViewDataSource, UIPickerViewDelega
     
     var idUsuarioAnonimo: String = ""
     
+    var recorrido: Recorrido = Recorrido()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        //valor por defecto
+        tipo = selectorValores[0]
         
-        //cargar el selector de valores
+        //añadir fechaInicio al recorrido que puede que llegue a hacer
+        recorrido.fechaInicio = Date.init()
+        
+        //cargar el selector de valores pickerview
         selector.delegate = self
         selector.dataSource = self
         
@@ -33,27 +40,6 @@ class VistaEleccion: UIViewController,UIPickerViewDataSource, UIPickerViewDelega
             print("usuario conectado correctamente \(self.idUsuarioAnonimo)")
         }
         
-        //prueba de subir a firebase
-        let localizaciones: [GeoPoint] = [GeoPoint(latitude: 42,longitude: 2), GeoPoint(latitude: 42.2, longitude: 2.2)]
-        
-        let recorrido: Recorrido = Recorrido(fechaI: Date.init(),fechaF: Date.init(),t: 12.00,id: "xyz", tipo: "correr.", localizaciones: localizaciones)
-        
-        
-        var ref: DocumentReference? = nil
-        ref = db.collection("recorridos").addDocument(data: [
-            "fechaInicio": recorrido.fechaInicio,
-            "fechaFin": recorrido.fechaFin,
-            "tiempoT": recorrido.tiempoT,
-            "id": "aleatorio",
-            "tipo": recorrido.tipo,
-            "localizaciones": recorrido.localizaciones
-        ]) { err in
-            if let err = err {
-                print("Error adding document: \(err)")
-            } else {
-                print("Document added with ID: \(ref!.documentID)")
-            }
-        }
 
         
     }
@@ -81,6 +67,13 @@ class VistaEleccion: UIViewController,UIPickerViewDataSource, UIPickerViewDelega
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         if( segue.identifier == "aEmpezar"){
             let destino = segue.destination as! VistaMarchando
+            
+            recorrido.tipo = self.tipo
+            recorrido.id = idUsuarioAnonimo
+            
+        
+            //pasar el recorrido
+            destino.recorrido = self.recorrido
             
             //destino.idUsuario = idUsuarioAnonimo
             
