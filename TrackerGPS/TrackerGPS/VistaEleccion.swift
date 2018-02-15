@@ -33,8 +33,32 @@ class VistaEleccion: UIViewController,UIPickerViewDataSource, UIPickerViewDelega
             print("usuario conectado correctamente \(self.idUsuarioAnonimo)")
         }
         
+        //prueba de subir a firebase
+        let localizaciones: [GeoPoint] = [GeoPoint(latitude: 42,longitude: 2), GeoPoint(latitude: 42.2, longitude: 2.2)]
+        
+        let recorrido: Recorrido = Recorrido(fechaI: Date.init(),fechaF: Date.init(),t: 12.00,id: "xyz", tipo: "correr.", localizaciones: localizaciones)
+        
+        
+        var ref: DocumentReference? = nil
+        ref = db.collection("recorridos").addDocument(data: [
+            "fechaInicio": recorrido.fechaInicio,
+            "fechaFin": recorrido.fechaFin,
+            "tiempoT": recorrido.tiempoT,
+            "id": "aleatorio",
+            "tipo": recorrido.tipo,
+            "localizaciones": recorrido.localizaciones
+        ]) { err in
+            if let err = err {
+                print("Error adding document: \(err)")
+            } else {
+                print("Document added with ID: \(ref!.documentID)")
+            }
+        }
+
+        
     }
     @IBOutlet weak var selector: UIPickerView!
+    
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -42,6 +66,7 @@ class VistaEleccion: UIViewController,UIPickerViewDataSource, UIPickerViewDelega
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return selectorValores.count
+        
     }
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return selectorValores[row]

@@ -10,25 +10,26 @@ import Foundation
 import Firebase
 
 class Recorrido{
-   /* enum tipos {
-        case Andar
-        case Correr
-        case Bicicleta
-    }*/
     
-    var returnFecha: Date! {return TimeZone.current.nextDaylightSavingTimeTransition}//stackOverflow= how to get a users time zone.
     //fecha inicio recorrido
-    var fecha/*Inicio*/: Date!
+    var fechaInicio: Date
     //fecha fin de recorrido
-    //var fechaFin: Date
+    var fechaFin: Date
     
+    //tiempo total de ruta
+    var tiempoT: Double
+    
+    //id del usuario o movil
     var id: String
+    //del tipo Correr, andar, bici ...
     var tipo: String
     
     var localizaciones = [GeoPoint] ()
     
-    init(fecha: Date, id: String, tipo: String, localizaciones: [GeoPoint]) {
-        self.fecha = fecha
+    init(fechaI: Date,fechaF: Date,t: Double, id: String, tipo: String, localizaciones: [GeoPoint]) {
+        self.fechaInicio = fechaI
+        self.fechaFin = fechaF
+        self.tiempoT = t
         self.id = id
         self.tipo = tipo
         self.localizaciones = localizaciones

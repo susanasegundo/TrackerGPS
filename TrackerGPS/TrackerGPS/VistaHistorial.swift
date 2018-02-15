@@ -30,7 +30,7 @@ class VistaHistorial: UITableViewController {
                     //por cada documento coger sus valores y guardarlos en variables para mas tarde
                     let documento = document.data()
                     //crear un objeto recorrido y pasarle valores del documento firebase
-                    let recorrido: Recorrido = Recorrido(fecha: (documento["fecha"] as? Date)!, id: documento["id"] as? String ?? "?", tipo: documento["tipo"] as? String ?? "?", localizaciones: documento["localizaciones"] as! [GeoPoint])
+                    let recorrido: Recorrido = Recorrido(fechaI: (documento["fechaInicio"] as? Date)!,fechaF: (documento["fechaFin"] as? Date)!,t: (documento["tiempoT"] as? Double!)!, id: documento["id"] as? String ?? "?", tipo: documento["tipo"] as? String ?? "?", localizaciones: documento["localizaciones"] as! [GeoPoint])
                     //con esto tenemos un objeto RECORRIDO con todos los datos del documento
                     //futuro: añadir= Tiempo total de recorrido
                     
@@ -74,12 +74,12 @@ class VistaHistorial: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "celda", for: indexPath) as! CeldaHistorial
         // Configure the cell...
         //dar el formato separado de Fecha y Hora para poner en cada label
-        let fe = recorridos[indexPath.row].fecha
+        let fe = recorridos[indexPath.row].fechaInicio
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd-MM-yyyy"
-        let myString = dateFormatter.string(from: fe!)
+        let myString = dateFormatter.string(from: fe)
         dateFormatter.dateFormat = "HH:mm:ss"
-        let updatedString = dateFormatter.string(from: fe!)
+        let updatedString = dateFormatter.string(from: fe)
         //escribir en cada una de ellas
         cell.fechaLabel.text = myString
         cell.fecha2Label.text = updatedString
