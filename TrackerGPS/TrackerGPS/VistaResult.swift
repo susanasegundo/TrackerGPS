@@ -60,18 +60,28 @@ class VistaResult: UIViewController, MKMapViewDelegate {
         
         let overlays = places.map { MKCircle(center: $0.coordinate, radius: 100) }
         mapView?.addOverlays(overlays)
-        
+         
         var locations = places.map { $0.coordinate }*/
         mapView?.delegate = self
-
-        let coords1 = CLLocationCoordinate2D(latitude: 40.4167018, longitude:-3.7037788)
+        
+        //transformacion de [GeoPoint] a CLLocation
+        var cambio: [CLLocationCoordinate2D] = [CLLocationCoordinate2D]()
+        for location in recorrido.localizaciones {
+            let lc: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude)
+          cambio.append(lc)
+            
+        }
+        // a dibujar
+        /*let coords1 = CLLocationCoordinate2D(latitude: 40.4167018, longitude:-3.7037788)
         let coords2 = CLLocationCoordinate2D(latitude: 42.3499677, longitude:-3.6822051)
         let coords3 = CLLocationCoordinate2D(latitude: 42.8587995, longitude:-2.6824780)
-        let testcoords:[CLLocationCoordinate2D] = [coords1,coords2,coords3]
-        let polyline = MKPolyline(coordinates: testcoords, count: testcoords.count)
+        let testcoords:[CLLocationCoordinate2D] = [coords1,coords2,coords3]*/
+        
+        //let polyline = MKPolyline(coordinates: testcoords, count: testcoords.count)
+        let polyline = MKPolyline(coordinates: cambio, count: cambio.count)
         mapView?.add(polyline)
         mapView?.delegate = self
-        mapView.centerCoordinate = coords2
+        //mapView.centerCoordinate = coords2
     
         mapView(mapView, rendererFor: polyline)
         
