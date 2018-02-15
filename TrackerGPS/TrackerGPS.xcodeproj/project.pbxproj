@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		02255BC1202CC7CA0042B863 /* VistaDetalles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02255BC0202CC7CA0042B863 /* VistaDetalles.swift */; };
+		0275DB18203613D400C050F0 /* VistaResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0275DB17203613D300C050F0 /* VistaResult.swift */; };
 		0293AAA720238FA7000E4A6C /* Recursos de imagenes in Resources */ = {isa = PBXBuildFile; fileRef = 0293AAA620238FA7000E4A6C /* Recursos de imagenes */; };
 		0293AAA9202391F4000E4A6C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0293AAA8202391F4000E4A6C /* CoreLocation.framework */; };
 		0293AAAB20239204000E4A6C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0293AAAA20239204000E4A6C /* MapKit.framework */; };
@@ -30,6 +31,7 @@
 
 /* Begin PBXFileReference section */
 		02255BC0202CC7CA0042B863 /* VistaDetalles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VistaDetalles.swift; sourceTree = "<group>"; };
+		0275DB17203613D300C050F0 /* VistaResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VistaResult.swift; sourceTree = "<group>"; };
 		0293AAA620238FA7000E4A6C /* Recursos de imagenes */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Recursos de imagenes"; sourceTree = "<group>"; };
 		0293AAA8202391F4000E4A6C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		0293AAAA20239204000E4A6C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -106,6 +108,7 @@
 				2C46497F201E3F3800EAA36F /* Recorrido.swift */,
 				2C464981201E473400EAA36F /* PuntosDeGeolocalizacion.swift */,
 				02255BC0202CC7CA0042B863 /* VistaDetalles.swift */,
+				0275DB17203613D300C050F0 /* VistaResult.swift */,
 			);
 			path = TrackerGPS;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C1D437E201774E200F58178 /* VistaInicio.swift in Sources */,
+				0275DB18203613D400C050F0 /* VistaResult.swift in Sources */,
 				2C3D4DA02011659100B30409 /* AppDelegate.swift in Sources */,
 				2C1D4380201774F400F58178 /* VistaEleccion.swift in Sources */,
 				02255BC1202CC7CA0042B863 /* VistaDetalles.swift in Sources */,
