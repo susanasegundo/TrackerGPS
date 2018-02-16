@@ -8,19 +8,50 @@
 
 import UIKit
 import Firebase
+import CoreLocation
 
-class VistaMarchando: UIViewController {
+class VistaMarchando: UIViewController, CLLocationManagerDelegate {
     //variable recorrido
     var recorrido: Recorrido = Recorrido()
-    var localizacionesArray: [GeoPoint] = [GeoPoint(latitude: 0, longitude: 0)]//init por defecto, se sobreescribe en el segue.
+    var localizacionesArray: [GeoPoint] = [GeoPoint]()//init por defecto, se sobreescribe en el segue.
     
     //tema timer contador => https://medium.com/ios-os-x-development/build-an-stopwatch-with-swift-3-0-c7040818a10f
     var contador = 0.0
     var tiempo = Timer()
     
+    //para localizacion
+    var locationManager:CLLocationManager = CLLocationManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         runTimer()
+        
+        //iniciar la obtencion de localizacion
+        if CLLocationManager.locationServicesEnabled(){
+            locationManager.delegate = self
+            locationManager.requestWhenInUseAuthorization()
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager.startUpdatingLocation()
+            print("localizacion")
+        }else{
+            print("Error de servicios")
+        }
+        
+    }
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let locValue: CLLocationCoordinate2D = manager.location!.coordinate
+        print("localizacion: \(locValue.latitude), \(locValue.longitude)")
+        print(localizacionesArray)
+        
+        //prueba para guardar la localizacion en el array
+        localizacionesArray.append(GeoPoint(latitude: locValue.latitude, longitude: locValue.longitude))
+    }
+  
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        locationManager.stopUpdatingLocation()
+        if((error) != nil){
+            print(error)
+        }
     }
     
     //funcion para bucle contador, sume mas 1
@@ -54,6 +85,7 @@ class VistaMarchando: UIViewController {
             //pausar timer
             tiempo.invalidate()
             pausaNombre.setTitle("Reanudar", for: UIControlState.normal)
+            print(locationManager.location?.coordinate)
         }else{
             estadoBotonPausa = 0
             //reanudar timer
