@@ -19,7 +19,7 @@ class VistaResult: UIViewController, MKMapViewDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         addAnotations()
-        
+        subirAFirebase()
     }
 
     
@@ -112,7 +112,7 @@ class VistaResult: UIViewController, MKMapViewDelegate {
             
             //pasar al destino el recorrido
             destino.recorrido = self.recorrido
-            
+                        
             
         }else{}
     }

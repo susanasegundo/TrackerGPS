@@ -85,12 +85,13 @@ class VistaMarchando: UIViewController, CLLocationManagerDelegate {
             //pausar timer
             tiempo.invalidate()
             pausaNombre.setTitle("Reanudar", for: UIControlState.normal)
-            print(locationManager.location?.coordinate)
+            self.locationManager.stopUpdatingLocation()
         }else{
             estadoBotonPausa = 0
             //reanudar timer
             runTimer()
             pausaNombre.setTitle("Pausar", for: UIControlState.normal)
+            self.locationManager.startUpdatingLocation()
         }
     }
     
@@ -100,6 +101,8 @@ class VistaMarchando: UIViewController, CLLocationManagerDelegate {
         tiempo.invalidate()
         var vControl = 0
        
+        //parar la actualizacion de localizacion
+        self.locationManager.stopUpdatingLocation()
         
         let defaultAction = UIAlertAction(title: "Aceptar", style: .default){
             (action) in
@@ -111,6 +114,7 @@ class VistaMarchando: UIViewController, CLLocationManagerDelegate {
                 print("Prepare segue")
                 //que se ejecute el segue
                 self.performSegue(withIdentifier: "aMapa", sender: self)
+                
             }
         }
         
@@ -120,7 +124,8 @@ class VistaMarchando: UIViewController, CLLocationManagerDelegate {
             //respond to user selection of the action
             self.runTimer()
             print("cancelar")
-            
+            //reanudar localizacion
+            self.locationManager.startUpdatingLocation()
         }
         
         //crear y configurar el controlador de alerta
