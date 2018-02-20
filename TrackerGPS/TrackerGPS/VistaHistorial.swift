@@ -33,7 +33,7 @@ class VistaHistorial: UITableViewController {
                     //por cada documento coger sus valores y guardarlos en variables para mas tarde
                     let documento = document.data()
                     //crear un objeto recorrido y pasarle valores del documento firebase
-                     self.recorrido = Recorrido(fechaI: (documento["fechaInicio"] as? Date)!,fechaF: (documento["fechaFin"] as? Date)!,t: (documento["tiempoT"] as? Double!)!, id: documento["id"] as? String ?? "?", tipo: documento["tipo"] as? String ?? "?", localizaciones: documento["localizaciones"] as! [GeoPoint])
+                    self.recorrido = Recorrido(fechaI: (documento["fechaInicio"] as? Date)!,fechaF: (documento["fechaFin"] as? Date)!,t: (documento["tiempoT"] as? Double!)!, id: documento["id"] as? String ?? "?", tipo: documento["tipo"] as? String ?? "?", localizaciones: documento["localizaciones"] as? [GeoPoint])
                     //con esto tenemos un objeto RECORRIDO con todos los datos del documento
                     //futuro: añadir= Tiempo total de recorrido
                     
@@ -88,12 +88,24 @@ class VistaHistorial: UITableViewController {
         cell.fecha2Label.text = updatedString
         cell.tipoLabel.text = recorridos[indexPath.row].tipo
         
+       cell.botonVer.isEnabled = false
         
         return cell
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return secciones[section]
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath) as! CeldaHistorial
+        cell.botonVer.isEnabled = true
+        
+    }
+    override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath) as! CeldaHistorial
+        cell.botonVer.isEnabled = false
+
     }
 
     /*
@@ -138,10 +150,10 @@ class VistaHistorial: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if( segue.identifier == "aMapa"){
             let destino = segue.destination as! VistaResult
-            
-            //pasar al destino el recorrido
-            destino.recorrido = self.recorrido
-            
+          
+            //pasar al destino el recorrido del row seleccionado
+            destino.recorrido = recorridos[tableView.indexPathForSelectedRow!.row]
+            destino.subirDatos = false
             
         }else{}
         

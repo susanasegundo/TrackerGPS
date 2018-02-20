@@ -267,6 +267,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="botonVer" destination="rpA-yk-t7B" id="1On-au-wHO"/>
                                     <outlet property="fecha2Label" destination="zdD-NU-XIP" id="x3Z-xv-6r4"/>
                                     <outlet property="fechaLabel" destination="2Iy-Pf-qDe" id="bdN-Yt-XJR"/>
                                     <outlet property="tipoLabel" destination="IUH-AB-zEx" id="eo0-w3-pq3"/>

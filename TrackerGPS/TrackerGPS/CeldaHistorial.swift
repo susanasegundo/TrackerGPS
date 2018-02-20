@@ -13,6 +13,7 @@ class CeldaHistorial: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        botonVer.isEnabled = false
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -27,5 +28,8 @@ class CeldaHistorial: UITableViewCell {
     @IBAction func verAction(_ sender: Any) {
         
     }
+    @IBOutlet weak var botonVer: UIButton!
+    
+    
     
 }

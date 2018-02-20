@@ -13,13 +13,16 @@ import Firebase
 class VistaResult: UIViewController, MKMapViewDelegate {
     
     var recorrido: Recorrido = Recorrido()
-    
+    var subirDatos: Bool = false
     @IBOutlet var mapView: MKMapView!
+    
     override func viewDidLoad() {	
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        addAnotations()
-        subirAFirebase()
+        addAnotations()        
+        if(subirDatos) {
+            subirAFirebase()
+        }
     }
 
     

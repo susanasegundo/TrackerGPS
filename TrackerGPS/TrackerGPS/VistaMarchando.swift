@@ -163,6 +163,7 @@ class VistaMarchando: UIViewController, CLLocationManagerDelegate {
             
             //pasar al destino el recorrido
             destino.recorrido = self.recorrido
+            destino.subirDatos = true
             
             
         }else{}
