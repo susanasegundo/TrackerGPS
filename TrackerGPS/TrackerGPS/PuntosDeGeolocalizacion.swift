@@ -7,12 +7,9 @@
 //
 
 import Foundation
+import MapKit
 
-struct PuntosDeGeolocalizacion {
-    var latitud: Double = 0
-    var longitud: Double = 0
-    init(l:Double,ln: Double) {
-        self.latitud = l
-        self.longitud = ln
-    }
+// The fixed formula
+struct Global {
+    
 }
