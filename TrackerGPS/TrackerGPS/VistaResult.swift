@@ -26,11 +26,8 @@ class VistaResult: UIViewController, MKMapViewDelegate {
         if(subirDatos) {
             subirAFirebase()
         }
-    }
-
-    
-    
-    
+    } 
+  
     //subir a firebase
     func subirAFirebase() {
         
@@ -54,20 +51,20 @@ class VistaResult: UIViewController, MKMapViewDelegate {
     
     
     
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    func addAnotations(){
-        
+    func addAnotations(){        
         /*mapView?.delegate = self
         mapView?.addAnnotations(places)
         
         let overlays = places.map { MKCircle(center: $0.coordinate, radius: 100) }
-        mapView?.addOverlays(overlays)
-         
+        mapView?.addOverlays(overlays)         
         var locations = places.map { $0.coordinate }*/
+      
         mapView?.delegate = self
         
         //transformacion de [GeoPoint] a CLLocation
@@ -86,10 +83,8 @@ class VistaResult: UIViewController, MKMapViewDelegate {
             //controlar el punto anterior con el nuevo
             if (vControl == 2){
                 loc1 = loc2
-                loc2 = lc
-                
-            }
-            
+                loc2 = lc                
+            }            
             //los 2 primeros puntos que coge
             if(vControl == 0){
                 loc1 = lc
@@ -98,7 +93,7 @@ class VistaResult: UIViewController, MKMapViewDelegate {
                 loc2 = lc
                 vControl = 2
             }
-            
+          
             if (vControl == 2){
                 self.distanciaTotal += calcularMetrosEntreDosPuntos(localizacion1: loc1,localizacion2: loc2)
             }
@@ -116,13 +111,10 @@ class VistaResult: UIViewController, MKMapViewDelegate {
         mapView?.delegate = self
         //mapView.centerCoordinate = coords2
     
-        mapView(mapView, rendererFor: polyline)
-        
+        mapView(mapView, rendererFor: polyline)        
+
     }
-    
-    /*func procesar ( _ persona:String ) {
-     print(persona)
-     }*/
+  
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
         //Return an `MKPolylineRenderer` for the `MKPolyline` in the `MKMapViewDelegate`s method
         if let polyline = overlay as? MKPolyline {
@@ -135,11 +127,9 @@ class VistaResult: UIViewController, MKMapViewDelegate {
         //return MKOverlayRenderer()
     }
     
+
     func calcularMetrosEntreDosPuntos(localizacion1: CLLocationCoordinate2D, localizacion2: CLLocationCoordinate2D) -> Double{
         let radioTierra = 3959.0 //en millas
-        //let c1: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 42.866830, longitude: -2.677270 )
-        //let c2: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 42.867297, longitude: -2.675838 )
-        
         let calc1 = localizacion2.latitude - localizacion1.latitude
         let calc2 = localizacion2.longitude - localizacion1.longitude
         
@@ -149,17 +139,10 @@ class VistaResult: UIViewController, MKMapViewDelegate {
         
         let a = sin(grado1/2) * sin(grado1/2) + cos(localizacion1.latitude * .pi / 180) * cos(localizacion2.latitude * .pi / 180) * sin(grado2/2) * sin(grado2/2)
         let c = 2 * atan2(sqrt(a),sqrt(1-a))
-        let d = radioTierra * c
-        
-        /*let a = sin(deltaP/2) * sin(deltaP/2) + cos(uLat.degreesToRadians) * cos(sLat.degreesToRadians) * sin(deltaL/2) * sin(deltaL/2)
-         let c = 2 * atan2(sqrt(a), sqrt(1-a))
-         let d = radius * c*/
-        
-        //print("")
-        return round((d / 0.62137) * 1000)
-        //print("Distancia => \(valorFinal.rounded()) Metros")
+        let d = radioTierra * c 
+      
+        return round((d / 0.62137) * 1000)        
     }
-    
     
     // MARK: - Navigation
 
@@ -174,6 +157,6 @@ class VistaResult: UIViewController, MKMapViewDelegate {
             
         }else{}
     }
-    
+
 
 }

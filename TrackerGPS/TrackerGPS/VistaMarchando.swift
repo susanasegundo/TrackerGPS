@@ -13,6 +13,7 @@ import CoreLocation
 class VistaMarchando: UIViewController, CLLocationManagerDelegate {
     //variable recorrido
     var recorrido: Recorrido = Recorrido()
+    //donde se guardan las localizaciones
     var localizacionesArray: [GeoPoint] = [GeoPoint]()//init por defecto, se sobreescribe en el segue.
     
     //tema timer contador => https://medium.com/ios-os-x-development/build-an-stopwatch-with-swift-3-0-c7040818a10f
@@ -40,10 +41,10 @@ class VistaMarchando: UIViewController, CLLocationManagerDelegate {
     }
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let locValue: CLLocationCoordinate2D = manager.location!.coordinate
-        print("localizacion: \(locValue.latitude), \(locValue.longitude)")
-        print(localizacionesArray)
+        //print("localizacion: \(locValue.latitude), \(locValue.longitude)")
+        //print(localizacionesArray)
         
-        //prueba para guardar la localizacion en el array
+        //guardar la localizacion en el array
         localizacionesArray.append(GeoPoint(latitude: locValue.latitude, longitude: locValue.longitude))
     }
   
@@ -93,6 +94,7 @@ class VistaMarchando: UIViewController, CLLocationManagerDelegate {
             pausaNombre.setTitle("Pausar", for: UIControlState.normal)
             self.locationManager.startUpdatingLocation()
         }
+
     }
     
     //Boton STOP
@@ -113,12 +115,10 @@ class VistaMarchando: UIViewController, CLLocationManagerDelegate {
             if vControl == 1 {
                 print("Prepare segue")
                 //que se ejecute el segue
-                self.performSegue(withIdentifier: "aMapa", sender: self)
-                
+                self.performSegue(withIdentifier: "aMapa", sender: self)                
             }
-        }
-        
-        
+        }     
+      
         let cancelAction = UIAlertAction(title: "Cancelar", style: .cancel){
             (action) in
             //respond to user selection of the action
@@ -138,12 +138,10 @@ class VistaMarchando: UIViewController, CLLocationManagerDelegate {
         alert.addAction(cancelAction)
         
         //para que salga el mensaje o se "presente" en pantalla
-        self.present(alert,animated: true)
-        
-        
-        }
+        self.present(alert,animated: true)   
+    }   
     
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -158,7 +156,7 @@ class VistaMarchando: UIViewController, CLLocationManagerDelegate {
             //la fecha de que acaba.
             recorrido.fechaFin = Date.init()
             //el tiempo que ha tardado, por ahora lo cojo del tiempo.
-            recorrido.tiempoT = contador //pasa solo los segundos ADVERTENCIA.
+            recorrido.tiempoT = contador //pasa solo los segundos, es por el tema del historial y como se guarda el tiempo. La conversion se hace en detalles.
             
             
             //pasar al destino el recorrido
@@ -166,18 +164,8 @@ class VistaMarchando: UIViewController, CLLocationManagerDelegate {
             destino.subirDatos = true
             
             
-        }else{}
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        }else{
+        }  
     }
-    */
-
-}
+  
 }

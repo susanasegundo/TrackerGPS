@@ -11,9 +11,7 @@ import UIKit
 class VistaInicio: UIViewController {
 
     override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.      
+        super.viewDidLoad()      
     }
 
     override func didReceiveMemoryWarning() {
