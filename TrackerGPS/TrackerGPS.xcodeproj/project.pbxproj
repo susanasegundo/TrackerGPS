@@ -10,9 +10,12 @@
 		0221F3032023A3E500230675 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0221F3022023A3E500230675 /* GoogleService-Info.plist */; };
 		023DFE07202CCF1600C3DEFA /* VistaResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023DFE06202CCF1600C3DEFA /* VistaResult.swift */; };
 		02255BC1202CC7CA0042B863 /* VistaDetalles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02255BC0202CC7CA0042B863 /* VistaDetalles.swift */; };
+		0275DB18203613D400C050F0 /* VistaResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0275DB17203613D300C050F0 /* VistaResult.swift */; };
 		0293AAA720238FA7000E4A6C /* Recursos de imagenes in Resources */ = {isa = PBXBuildFile; fileRef = 0293AAA620238FA7000E4A6C /* Recursos de imagenes */; };
 		0293AAA9202391F4000E4A6C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0293AAA8202391F4000E4A6C /* CoreLocation.framework */; };
 		0293AAAB20239204000E4A6C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0293AAAA20239204000E4A6C /* MapKit.framework */; };
+		2C18F62C202DFE5200D3A908 /* pisadas1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2C18F62B202DFE5100D3A908 /* pisadas1.gif */; };
+		2C194E70201761A2005AD928 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C194E6F201761A2005AD928 /* GoogleService-Info.plist */; };
 		2C1D437E201774E200F58178 /* VistaInicio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1D437D201774E200F58178 /* VistaInicio.swift */; };
 		2C1D4380201774F400F58178 /* VistaEleccion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1D437F201774F400F58178 /* VistaEleccion.swift */; };
 		2C1D4384201793AD00F58178 /* VistaMapa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1D4383201793AD00F58178 /* VistaMapa.swift */; };
@@ -33,9 +36,14 @@
 		0221F3022023A3E500230675 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		023DFE06202CCF1600C3DEFA /* VistaResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VistaResult.swift; sourceTree = "<group>"; };
 		02255BC0202CC7CA0042B863 /* VistaDetalles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VistaDetalles.swift; sourceTree = "<group>"; };
+		0275DB17203613D300C050F0 /* VistaResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VistaResult.swift; sourceTree = "<group>"; };
 		0293AAA620238FA7000E4A6C /* Recursos de imagenes */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Recursos de imagenes"; sourceTree = "<group>"; };
 		0293AAA8202391F4000E4A6C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		0293AAAA20239204000E4A6C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+
+		2C18F62B202DFE5100D3A908 /* pisadas1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = pisadas1.gif; path = "Recursos de imagenes/pisadas1.gif"; sourceTree = "<group>"; };
+		2C194E6F201761A2005AD928 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+
 		2C1D437D201774E200F58178 /* VistaInicio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VistaInicio.swift; sourceTree = "<group>"; };
 		2C1D437F201774F400F58178 /* VistaEleccion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VistaEleccion.swift; sourceTree = "<group>"; };
 		2C1D4383201793AD00F58178 /* VistaMapa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VistaMapa.swift; sourceTree = "<group>"; };
@@ -91,7 +99,9 @@
 		2C3D4D9E2011659100B30409 /* TrackerGPS */ = {
 			isa = PBXGroup;
 			children = (
-				C141A2082023A79200B1CAFA /* GoogleService-Info.plist */,
+
+				2C18F62B202DFE5100D3A908 /* pisadas1.gif */,
+				2C194E6F201761A2005AD928 /* GoogleService-Info.plist */,
 				2C3D4D9F2011659100B30409 /* AppDelegate.swift */,
 				2C3D4DA32011659100B30409 /* Main.storyboard */,
 				2C3D4DA62011659100B30409 /* Assets.xcassets */,
@@ -102,12 +112,12 @@
 				2C1D437F201774F400F58178 /* VistaEleccion.swift */,
 				2C28D422201B81DA007700B3 /* VistaHistorial.swift */,
 				2C28D424201B820D007700B3 /* CeldaHistorial.swift */,
-				2C1D4383201793AD00F58178 /* VistaMapa.swift */,
 				2CEBBD6B201B84BD00189B1B /* VistaMarchando.swift */,
+				0275DB17203613D300C050F0 /* VistaResult.swift */,
+				02255BC0202CC7CA0042B863 /* VistaDetalles.swift */,
+				2C1D4383201793AD00F58178 /* VistaMapa.swift */,
 				2C46497F201E3F3800EAA36F /* Recorrido.swift */,
 				2C464981201E473400EAA36F /* PuntosDeGeolocalizacion.swift */,
-				023DFE06202CCF1600C3DEFA /* VistaResult.swift */,
-				02255BC0202CC7CA0042B863 /* VistaDetalles.swift */,
 			);
 			path = TrackerGPS;
 			sourceTree = "<group>";
@@ -194,6 +204,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C3D4DAA2011659100B30409 /* LaunchScreen.storyboard in Resources */,
+				2C194E70201761A2005AD928 /* GoogleService-Info.plist in Resources */,
+				2C18F62C202DFE5200D3A908 /* pisadas1.gif in Resources */,
 				2C3D4DA72011659100B30409 /* Assets.xcassets in Resources */,
 				2C3D4DA52011659100B30409 /* Main.storyboard in Resources */,
 				0293AAA720238FA7000E4A6C /* Recursos de imagenes in Resources */,
@@ -212,6 +224,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-TrackerGPS/Pods-TrackerGPS-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
+				"${BUILT_PRODUCTS_DIR}/Eureka/Eureka.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
@@ -225,6 +238,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Eureka.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
@@ -281,6 +295,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C1D437E201774E200F58178 /* VistaInicio.swift in Sources */,
+				0275DB18203613D400C050F0 /* VistaResult.swift in Sources */,
 				2C3D4DA02011659100B30409 /* AppDelegate.swift in Sources */,
 				2C1D4380201774F400F58178 /* VistaEleccion.swift in Sources */,
 				02255BC1202CC7CA0042B863 /* VistaDetalles.swift in Sources */,

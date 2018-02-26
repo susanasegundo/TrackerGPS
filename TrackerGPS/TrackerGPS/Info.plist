@@ -3,7 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>permiso</string>
+	<string>Permiso para acceder al GPS del terminal</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Permiso para acceder al GPS del terminal</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>

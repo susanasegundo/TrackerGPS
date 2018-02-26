@@ -14,8 +14,12 @@ import Firebase
 
 class VistaHistorial: UITableViewController {
 
+    let secciones = ["Fecha Inicio     Actividad"]
+    //array de recorridos para mostrar en la tabla
     var recorridos = [Recorrido]()
-    var idUsuario: String!    
+    var idUsuario: String!
+    //el recorrido que se usa para meter al recorridos, y para pasar por el segue
+    var recorrido: Recorrido = Recorrido()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +33,7 @@ class VistaHistorial: UITableViewController {
                     //por cada documento coger sus valores y guardarlos en variables para mas tarde
                     let documento = document.data()
                     //crear un objeto recorrido y pasarle valores del documento firebase
-                    let recorrido: Recorrido = Recorrido(fecha: (documento["fecha"] as? Date)!, id: documento["id"] as? String ?? "?", tipo: documento["tipo"] as? String ?? "?", localizaciones: documento["localizaciones"] as! [GeoPoint])
+                    self.recorrido = Recorrido(fechaI: (documento["fechaInicio"] as? Date)!,fechaF: (documento["fechaFin"] as? Date)!,t: (documento["tiempoT"] as? Double!)!, id: documento["id"] as? String ?? "?", tipo: documento["tipo"] as? String ?? "?", localizaciones: documento["localizaciones"] as? [GeoPoint])
                     //con esto tenemos un objeto RECORRIDO con todos los datos del documento
                     //futuro: añadir= Tiempo total de recorrido
                     
@@ -57,12 +61,14 @@ class VistaHistorial: UITableViewController {
                     
                    
                     //añadir recorrido a la matriz
-                    self.recorridos.append(recorrido)
-                    //recargar tabla ahora que hay datos
-                    self.tableView.reloadData()
+                    self.recorridos.append(self.recorrido)
+                    
                     
             }
-            
+                //recargar tabla ahora que hay datos
+                self.tableView.reloadData()
+                
+                
         }
             
         }
@@ -82,7 +88,7 @@ class VistaHistorial: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return secciones.count
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -94,20 +100,36 @@ class VistaHistorial: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "celda", for: indexPath) as! CeldaHistorial
         // Configure the cell...
         //dar el formato separado de Fecha y Hora para poner en cada label
-        let fe = recorridos[indexPath.row].fecha
+        let fe = recorridos[indexPath.row].fechaInicio
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd-MM-yyyy"
-        let myString = dateFormatter.string(from: fe!)
+        let myString = dateFormatter.string(from: fe)
         dateFormatter.dateFormat = "HH:mm:ss"
-        let updatedString = dateFormatter.string(from: fe!)
+        let updatedString = dateFormatter.string(from: fe)
         //escribir en cada una de ellas
         cell.fechaLabel.text = myString
         cell.fecha2Label.text = updatedString
         cell.tipoLabel.text = recorridos[indexPath.row].tipo
         
+       cell.botonVer.isEnabled = false
+        
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return secciones[section]
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath) as! CeldaHistorial
+        cell.botonVer.isEnabled = true
+        
+    }
+    override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath) as! CeldaHistorial
+        cell.botonVer.isEnabled = false
+
+    }
 
     /*
     // Override to support conditional editing of the table view.
@@ -144,14 +166,21 @@ class VistaHistorial: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if( segue.identifier == "aMapa"){
+            let destino = segue.destination as! VistaResult
+          
+            //pasar al destino el recorrido del row seleccionado
+            destino.recorrido = recorridos[tableView.indexPathForSelectedRow!.row]
+            destino.subirDatos = false
+            
+        }else{}
+        
     }
-    */
+    
 
 }

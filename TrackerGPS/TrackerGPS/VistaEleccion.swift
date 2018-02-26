@@ -17,10 +17,17 @@ class VistaEleccion: UIViewController,UIPickerViewDataSource, UIPickerViewDelega
     
     var idUsuarioAnonimo: String = ""
     
+    var recorrido: Recorrido = Recorrido()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        //valor por defecto
+        tipo = selectorValores[0]
         
-        //cargar el selector de valores
+        //añadir fechaInicio al recorrido que puede que llegue a hacer
+        recorrido.fechaInicio = Date.init()
+        
+        //cargar el selector de valores pickerview
         selector.delegate = self
         selector.dataSource = self
         
@@ -33,8 +40,11 @@ class VistaEleccion: UIViewController,UIPickerViewDataSource, UIPickerViewDelega
             print("usuario conectado correctamente \(self.idUsuarioAnonimo)")
         }
         
+
+        
     }
     @IBOutlet weak var selector: UIPickerView!
+    
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -42,6 +52,7 @@ class VistaEleccion: UIViewController,UIPickerViewDataSource, UIPickerViewDelega
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return selectorValores.count
+        
     }
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return selectorValores[row]
@@ -56,6 +67,13 @@ class VistaEleccion: UIViewController,UIPickerViewDataSource, UIPickerViewDelega
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         if( segue.identifier == "aEmpezar"){
             let destino = segue.destination as! VistaMarchando
+            
+            recorrido.tipo = self.tipo
+            recorrido.id = idUsuarioAnonimo
+            
+        
+            //pasar el recorrido
+            destino.recorrido = self.recorrido
             
             //destino.idUsuario = idUsuarioAnonimo
             
