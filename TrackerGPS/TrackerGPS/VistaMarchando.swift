@@ -25,6 +25,8 @@ class VistaMarchando: UIViewController, CLLocationManagerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        estadoBotonPausa = 1
+        estadoLabel.text = "Estado: En funcionamiento"
         runTimer()
         
         //iniciar la obtencion de localizacion
@@ -39,10 +41,10 @@ class VistaMarchando: UIViewController, CLLocationManagerDelegate {
         }
         
     }
+    
+    //cada vez que se refresca las coordenadas
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let locValue: CLLocationCoordinate2D = manager.location!.coordinate
-        //print("localizacion: \(locValue.latitude), \(locValue.longitude)")
-        //print(localizacionesArray)
         
         //guardar la localizacion en el array
         localizacionesArray.append(GeoPoint(latitude: locValue.latitude, longitude: locValue.longitude))
@@ -78,24 +80,34 @@ class VistaMarchando: UIViewController, CLLocationManagerDelegate {
     
     //cuando se pulse cambie de estado el propio boton y el timeLabel.
     @IBOutlet weak var pausaNombre: UIButton!
+    @IBOutlet weak var reanudarNombre: UIButton!
+    @IBOutlet weak var stopNombre: UIButton!
+    
+    // 0 no funciona, 1 funciona
     var estadoBotonPausa: Int = 0
-    @IBAction func pausaBoton(_ sender: Any) {
-        
+    
+    @IBAction func reanudarBoton(_ sender: Any) {
         if estadoBotonPausa == 0 {
-            estadoBotonPausa = 1
-            //pausar timer
-            tiempo.invalidate()
-            pausaNombre.setTitle("Reanudar", for: UIControlState.normal)
-            self.locationManager.stopUpdatingLocation()
-        }else{
-            estadoBotonPausa = 0
-            //reanudar timer
             runTimer()
-            pausaNombre.setTitle("Pausar", for: UIControlState.normal)
+            //cambiar imagen boton reanudar
+            reanudarNombre.setBackgroundImage(#imageLiteral(resourceName: "botonPlayAzul"), for: UIControlState.normal)
             self.locationManager.startUpdatingLocation()
+            pausaNombre.setBackgroundImage(#imageLiteral(resourceName: "botonPausaVerde"), for: UIControlState.normal)
+            estadoBotonPausa = 1
+            estadoLabel.text = "Estado: En funcionamiento"
         }
-
     }
+    @IBAction func pausarBoton(_ sender: Any) {
+        if estadoBotonPausa == 1 {
+            tiempo.invalidate()
+            self.locationManager.stopUpdatingLocation()
+            reanudarNombre.setBackgroundImage(#imageLiteral(resourceName: "botonPlayVerde"), for: UIControlState.normal)
+            pausaNombre.setBackgroundImage(#imageLiteral(resourceName: "botonPausa"), for: UIControlState.normal)
+            estadoBotonPausa = 0
+            estadoLabel.text = "Estado: Pausado..."
+            
+        }
+    }    
     
     //Boton STOP
     @IBAction func stopBoton(_ sender: Any) {
@@ -141,7 +153,8 @@ class VistaMarchando: UIViewController, CLLocationManagerDelegate {
         self.present(alert,animated: true)   
     }   
     
-
+    @IBOutlet weak var estadoLabel: UILabel!
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -149,7 +162,7 @@ class VistaMarchando: UIViewController, CLLocationManagerDelegate {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         if( segue.identifier == "aMapa"){
-            let destino = segue.destination as! VistaResult
+            let destino = segue.destination as! VistaMapa
             
             //tenemos el array de localizaciones
             recorrido.localizaciones = localizacionesArray

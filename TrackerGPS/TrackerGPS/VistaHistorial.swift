@@ -35,42 +35,13 @@ class VistaHistorial: UITableViewController {
                     //crear un objeto recorrido y pasarle valores del documento firebase
                     self.recorrido = Recorrido(fechaI: (documento["fechaInicio"] as? Date)!,fechaF: (documento["fechaFin"] as? Date)!,t: (documento["tiempoT"] as? Double!)!, id: documento["id"] as? String ?? "?", tipo: documento["tipo"] as? String ?? "?", localizaciones: documento["localizaciones"] as? [GeoPoint])
                     //con esto tenemos un objeto RECORRIDO con todos los datos del documento
-                    //futuro: añadir= Tiempo total de recorrido
-                    
-                    var gps = [Any]()
-                    //gps.append(documento["localizaciones"] as? [GeoPoint])
-                    
-                    print("GPS=> \(gps)")
-                    print(gps.count)
-                    //let info = documento["localizaciones"] as? Any
-                    
-                  /*  print("ESTA ES LA INFO =>    \(String(describing: info))")
-                    let hilo: String = info.
-                    print(hilo.substringToIndex())
-                    */
-                    
-                   // var coleccion = [PuntosDeGeolocalizacion]()
-                  //  coleccion.append(documento["localizaciones"] as! PuntosDeGeolocalizacion)
-                    //recorrido.localizaciones.append(coleccion)
-                  //  print(coleccion)
-                    //print("\(coleccion.count) array de geo \(String(describing: coleccion.first))")
-                    
-                   // print(self.recorridos.count )
-                    
-                    //recargar tabla ahora que hay datos
-                    
-                   
                     //añadir recorrido a la matriz
                     self.recorridos.append(self.recorrido)
                     
-                    
-            }
+                }
                 //recargar tabla ahora que hay datos
                 self.tableView.reloadData()
-                
-                
         }
-            
         }
        
         // Uncomment the following line to preserve selection between presentations
@@ -172,7 +143,7 @@ class VistaHistorial: UITableViewController {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if( segue.identifier == "aMapa"){
-            let destino = segue.destination as! VistaResult
+            let destino = segue.destination as! VistaMapa
           
             //pasar al destino el recorrido del row seleccionado
             destino.recorrido = recorridos[tableView.indexPathForSelectedRow!.row]
