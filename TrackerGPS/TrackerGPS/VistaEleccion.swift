@@ -12,7 +12,7 @@ import Firebase
 
 class VistaEleccion: UIViewController,UIPickerViewDataSource, UIPickerViewDelegate {
     
-    let selectorValores = ["Andar","Correr","Bicicleta"]
+    let selectorValores = ["Andar","Correr","Bicicleta","Coche","Moto","Otro"]
     var tipo = ""
     
     var idUsuarioAnonimo: String = ""
