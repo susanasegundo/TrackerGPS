@@ -19,6 +19,7 @@ class VistaMarchando: UIViewController, CLLocationManagerDelegate {
     //tema timer contador => https://medium.com/ios-os-x-development/build-an-stopwatch-with-swift-3-0-c7040818a10f
     var contador = 0.0
     var tiempo = Timer()
+    var intervalo = Timer()
     
     //para localizacion
     var locationManager:CLLocationManager = CLLocationManager()
@@ -28,6 +29,8 @@ class VistaMarchando: UIViewController, CLLocationManagerDelegate {
         estadoBotonPausa = 1
         estadoLabel.text = "Estado: En funcionamiento"
         runTimer()
+        runTimer2()
+        
         
         //iniciar la obtencion de localizacion
         if CLLocationManager.locationServicesEnabled(){
@@ -44,10 +47,31 @@ class VistaMarchando: UIViewController, CLLocationManagerDelegate {
     
     //cada vez que se refresca las coordenadas
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        let locValue: CLLocationCoordinate2D = manager.location!.coordinate
-        
+        //  let locValue: CLLocationCoordinate2D = manager.location!.coordinate
         //guardar la localizacion en el array
-        localizacionesArray.append(GeoPoint(latitude: locValue.latitude, longitude: locValue.longitude))
+        //   localizacionesArray.append(GeoPoint(latitude: locValue.latitude, longitude: locValue.longitude))
+    }
+    
+    func runTimer2() {
+        switch recorrido.tipo {
+        case "Andar":
+            intervalo = Timer.scheduledTimer(timeInterval: 9.0, target: self, selector: (#selector(VistaMarchando.currentLocationGuardar)), userInfo: nil, repeats: true)
+            case "Correr":
+            intervalo = Timer.scheduledTimer(timeInterval: 7.0, target: self, selector: (#selector(VistaMarchando.currentLocationGuardar)), userInfo: nil, repeats: true)
+            case "Bicicleta":
+            intervalo = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: (#selector(VistaMarchando.currentLocationGuardar)), userInfo: nil, repeats: true)
+            case "Coche", "Moto":
+            intervalo = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: (#selector(VistaMarchando.currentLocationGuardar)), userInfo: nil, repeats: true)
+            
+        default:
+            intervalo = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: (#selector(VistaMarchando.currentLocationGuardar)), userInfo: nil, repeats: true)
+        }
+        
+    }
+    
+    @objc func currentLocationGuardar() {
+        print(locationManager.location!.coordinate)
+        localizacionesArray.append(GeoPoint(latitude: locationManager.location!.coordinate.latitude, longitude: locationManager.location!.coordinate.longitude))
     }
   
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
@@ -89,6 +113,7 @@ class VistaMarchando: UIViewController, CLLocationManagerDelegate {
     @IBAction func reanudarBoton(_ sender: Any) {
         if estadoBotonPausa == 0 {
             runTimer()
+            runTimer2()
             //cambiar imagen boton reanudar
             reanudarNombre.setBackgroundImage(#imageLiteral(resourceName: "botonPlayAzul"), for: UIControlState.normal)
             self.locationManager.startUpdatingLocation()
@@ -100,6 +125,7 @@ class VistaMarchando: UIViewController, CLLocationManagerDelegate {
     @IBAction func pausarBoton(_ sender: Any) {
         if estadoBotonPausa == 1 {
             tiempo.invalidate()
+            intervalo.invalidate()
             self.locationManager.stopUpdatingLocation()
             reanudarNombre.setBackgroundImage(#imageLiteral(resourceName: "botonPlayVerde"), for: UIControlState.normal)
             pausaNombre.setBackgroundImage(#imageLiteral(resourceName: "botonPausa"), for: UIControlState.normal)
@@ -113,6 +139,7 @@ class VistaMarchando: UIViewController, CLLocationManagerDelegate {
     @IBAction func stopBoton(_ sender: Any) {
         //Se va a mostrar un mensaje de alerta
         tiempo.invalidate()
+        intervalo.invalidate()
         var vControl = 0
        
         //parar la actualizacion de localizacion
@@ -135,6 +162,7 @@ class VistaMarchando: UIViewController, CLLocationManagerDelegate {
             (action) in
             //respond to user selection of the action
             self.runTimer()
+            self.runTimer2()
             print("cancelar")
             //reanudar localizacion
             self.locationManager.startUpdatingLocation()
