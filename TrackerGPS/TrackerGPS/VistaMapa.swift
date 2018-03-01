@@ -24,6 +24,9 @@ class VistaMapa: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         addAnotations()
+        mapView.region.center = CLLocationCoordinate2D(latitude: recorrido.localizaciones[0].latitude, longitude: recorrido.localizaciones[0].longitude)
+        mapView.region.span = MKCoordinateSpan(latitudeDelta: 0.04, longitudeDelta: 0.04)
+        
         if(subirDatos) {
             subirAFirebase()
         }

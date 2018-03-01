@@ -98,14 +98,14 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="sVg-tN-TAp">
                                 <rect key="frame" x="105" y="288" width="164" height="316"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uv4-0b-EOU">
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uv4-0b-EOU">
                                         <rect key="frame" x="0.0" y="0.0" width="164" height="158"/>
                                         <state key="normal" backgroundImage="botonDeSeleccion"/>
                                         <connections>
                                             <segue destination="k0o-Ox-5Kc" kind="show" identifier="aEmpezar" id="lYS-01-TL8"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NMG-wh-sh7">
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NMG-wh-sh7">
                                         <rect key="frame" x="0.0" y="158" width="164" height="158"/>
                                         <state key="normal" backgroundImage="botonHistorial"/>
                                         <connections>
@@ -118,6 +118,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="WcT-3f-rJX" firstAttribute="top" secondItem="XBk-T6-wjv" secondAttribute="top" id="6l2-jV-TGD"/>
+                            <constraint firstItem="XBk-T6-wjv" firstAttribute="bottom" secondItem="sVg-tN-TAp" secondAttribute="bottom" constant="63" id="YYt-Gz-l88"/>
                             <constraint firstItem="sVg-tN-TAp" firstAttribute="top" secondItem="WcT-3f-rJX" secondAttribute="bottom" constant="8" id="bma-fB-oxP"/>
                             <constraint firstItem="XBk-T6-wjv" firstAttribute="trailing" secondItem="WcT-3f-rJX" secondAttribute="trailing" id="lM3-Jr-bGk"/>
                             <constraint firstItem="XBk-T6-wjv" firstAttribute="trailing" secondItem="sVg-tN-TAp" secondAttribute="trailing" constant="106" id="lnt-ku-fzL"/>
@@ -311,7 +312,7 @@
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="siZ-xD-GWL">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="siZ-xD-GWL">
                                         <rect key="frame" x="58" y="66" width="249.5" height="66"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="55"/>
                                         <nil key="textColor"/>
@@ -341,7 +342,7 @@
                                             <action selector="pausarBoton:" destination="k0o-Ox-5Kc" eventType="touchUpInside" id="6ij-BJ-f5k"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pZA-w0-mce">
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pZA-w0-mce">
                                         <rect key="frame" x="100" y="0.0" width="100" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="9lB-vi-IMf"/>
@@ -355,7 +356,7 @@
                                             <action selector="reanudarBoton:" destination="k0o-Ox-5Kc" eventType="touchUpInside" id="fpP-7a-DLc"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gSL-KI-0ru">
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gSL-KI-0ru">
                                         <rect key="frame" x="200" y="0.0" width="100" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="KWO-5f-Ltn"/>
@@ -479,6 +480,6 @@
         <image name="tracercarretera" width="297" height="496"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="oJa-5F-hul"/>
+        <segue reference="yST-Up-IJe"/>
     </inferredMetricsTieBreakers>
 </document>
