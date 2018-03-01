@@ -98,14 +98,14 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="sVg-tN-TAp">
                                 <rect key="frame" x="105" y="288" width="164" height="316"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uv4-0b-EOU">
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uv4-0b-EOU">
                                         <rect key="frame" x="0.0" y="0.0" width="164" height="158"/>
                                         <state key="normal" backgroundImage="botonDeSeleccion"/>
                                         <connections>
                                             <segue destination="k0o-Ox-5Kc" kind="show" identifier="aEmpezar" id="lYS-01-TL8"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NMG-wh-sh7">
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NMG-wh-sh7">
                                         <rect key="frame" x="0.0" y="158" width="164" height="158"/>
                                         <state key="normal" backgroundImage="botonHistorial"/>
                                         <connections>

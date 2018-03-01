@@ -28,10 +28,9 @@ class VistaMarchando: UIViewController, CLLocationManagerDelegate {
         super.viewDidLoad()
         estadoBotonPausa = 1
         estadoLabel.text = "Estado: En funcionamiento"
+        //timers de la cuenta del tiempo y obtencion de coordenada cada x segundos
         runTimer()
         runTimer2()
-        
-        
         //iniciar la obtencion de localizacion
         if CLLocationManager.locationServicesEnabled(){
             locationManager.delegate = self
@@ -42,6 +41,12 @@ class VistaMarchando: UIViewController, CLLocationManagerDelegate {
         }else{
             print("Error de servicios")
         }
+        
+        //es necesario tener minimo 1 localizacion para que no cause error
+       
+        currentLocationGuardar()
+        
+
         
     }
     
@@ -70,8 +75,9 @@ class VistaMarchando: UIViewController, CLLocationManagerDelegate {
     }
     
     @objc func currentLocationGuardar() {
-        print(locationManager.location!.coordinate)
+        print(locationManager.location!.coordinate)       
         localizacionesArray.append(GeoPoint(latitude: locationManager.location!.coordinate.latitude, longitude: locationManager.location!.coordinate.longitude))
+        
     }
   
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
@@ -153,7 +159,8 @@ class VistaMarchando: UIViewController, CLLocationManagerDelegate {
             print("aceptar")
             if vControl == 1 {
                 print("Prepare segue")
-                //que se ejecute el segue
+                //que se ejecute el segue y se guarde la localizacion mas actual en el tiempo, para ser lo mas preciso posible
+                self.currentLocationGuardar()
                 self.performSegue(withIdentifier: "aMapa", sender: self)                
             }
         }     
