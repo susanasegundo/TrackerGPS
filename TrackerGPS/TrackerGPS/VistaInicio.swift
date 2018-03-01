@@ -29,7 +29,7 @@ class VistaInicio: UIViewController {
     
     //creacion del pulso
     @objc func addPulse(){
-        let pulse = Pulsing(numberOfPulses: 1, radius: 50, position:boton.frame.origin)
+        let pulse = Pulsing(numberOfPulses: 1, radius: 150, position:boton.center)
         pulse.animationDuration = 0.8
         pulse.backgroundColor = UIColor.white.cgColor
         

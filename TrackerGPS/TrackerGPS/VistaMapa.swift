@@ -19,6 +19,9 @@ class VistaMapa: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate {
     var distanciaTotal: Double = 0
     
     @IBOutlet var mapView: MKMapView!
+    @IBAction func botonVolver(_ sender: Any) {
+        self.navigationController?.popToRootViewController(animated: true)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
