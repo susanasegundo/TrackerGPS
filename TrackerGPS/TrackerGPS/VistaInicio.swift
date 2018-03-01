@@ -29,14 +29,18 @@ class VistaInicio: UIViewController {
     
     //creacion del pulso
     @objc func addPulse(){
-        let pulse = Pulsing(numberOfPulses: 1, radius: 50, position: boton.center)
+        let pulse = Pulsing(numberOfPulses: 1, radius: 150, position:boton.center)
         pulse.animationDuration = 0.8
         pulse.backgroundColor = UIColor.white.cgColor
         
         self.view.layer.insertSublayer(pulse, below: boton.layer)
         
-        performSegue(withIdentifier: "aEleccion", sender: self)
+        _ = Timer.scheduledTimer(timeInterval: 0.6, target: self, selector: (#selector(VistaInicio.cambiar)), userInfo: nil, repeats: false)
+
         
+    }
+  @objc func cambiar()  {
+        self.performSegue(withIdentifier: "aEleccion", sender: self)
     }
     
     @IBAction func volver(segue:UIStoryboardSegue){
