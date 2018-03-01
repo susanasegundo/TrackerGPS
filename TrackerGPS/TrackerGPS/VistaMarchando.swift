@@ -75,8 +75,11 @@ class VistaMarchando: UIViewController, CLLocationManagerDelegate {
     }
     
     @objc func currentLocationGuardar() {
-        print(locationManager.location!.coordinate)       
-        localizacionesArray.append(GeoPoint(latitude: locationManager.location!.coordinate.latitude, longitude: locationManager.location!.coordinate.longitude))
+        //a veces saca nil
+        if locationManager.location!.coordinate != nil {
+            print(locationManager.location!.coordinate)
+            localizacionesArray.append(GeoPoint(latitude: locationManager.location!.coordinate.latitude, longitude: locationManager.location!.coordinate.longitude))
+        }
         
     }
   
