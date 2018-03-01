@@ -148,6 +148,9 @@ class VistaHistorial: UITableViewController {
             //pasar al destino el recorrido del row seleccionado
             destino.recorrido = recorridos[tableView.indexPathForSelectedRow!.row]
             destino.subirDatos = false
+            //se deshabilita para que al volver atras y darle otra vez al boton no salga nil.
+            let cell = tableView.cellForRow(at: tableView.indexPathForSelectedRow!) as! CeldaHistorial
+            cell.botonVer.isEnabled = false
             
         }else{}
         
