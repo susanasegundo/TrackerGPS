@@ -26,25 +26,40 @@ class VistaMarchando: UIViewController, CLLocationManagerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        estadoBotonPausa = 1
-        estadoLabel.text = "Estado: En funcionamiento"
-        //timers de la cuenta del tiempo y obtencion de coordenada cada x segundos
-        runTimer()
-        runTimer2()
+        //notificar al usuario de que se usara el gps.
+        locationManager.requestWhenInUseAuthorization()
+        estadoLabel.text = "En espera"
+        estadoBotonPausa = 2
+        stopNombre.isEnabled = false
+        
         //iniciar la obtencion de localizacion
-        if CLLocationManager.locationServicesEnabled(){
-            locationManager.delegate = self
-            locationManager.requestWhenInUseAuthorization()
-            locationManager.desiredAccuracy = kCLLocationAccuracyBest
-            locationManager.startUpdatingLocation()
-            print("localizacion")
+        if CLLocationManager.locationServicesEnabled()  {
+            switch CLLocationManager.authorizationStatus() {
+            case .notDetermined, .restricted, .denied:
+                print("Acceso no permitido, restringido o denegado")
+                estadoLabel.text = "Detección de ubicación restringido"
+            case .authorizedWhenInUse, .authorizedAlways:
+                print("Acceso permitido")
+                //como se ha autorizado arrancar el resto de la pantalla y sus servicios
+                locationManager.delegate = self
+                //locationManager.requestWhenInUseAuthorization()
+                locationManager.desiredAccuracy = kCLLocationAccuracyBest
+                locationManager.startUpdatingLocation()
+                
+                //inicio de sistemas
+                estadoBotonPausa = 1
+                estadoLabel.text = "Estado: En funcionamiento"
+                stopNombre.isEnabled = true
+                //timers de la cuenta del tiempo y obtencion de coordenada cada x segundos
+                runTimer()
+                runTimer2()
+            }
         }else{
-            print("Error de servicios")
+            print("Location services is not running...")
         }
         
-        //es necesario tener minimo 1 localizacion para que no cause error
+        
        
-        currentLocationGuardar()
         
 
         
@@ -52,12 +67,12 @@ class VistaMarchando: UIViewController, CLLocationManagerDelegate {
     
     //cada vez que se refresca las coordenadas
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        //  let locValue: CLLocationCoordinate2D = manager.location!.coordinate
-        //guardar la localizacion en el array
-        //   localizacionesArray.append(GeoPoint(latitude: locValue.latitude, longitude: locValue.longitude))
     }
     
     func runTimer2() {
+        //es necesario tener minimo 1 localizacion para que no cause error
+        currentLocationGuardar()
+        //tiempo de guardado de loc para cada tipo
         switch recorrido.tipo {
         case "Andar":
             intervalo = Timer.scheduledTimer(timeInterval: 9.0, target: self, selector: (#selector(VistaMarchando.currentLocationGuardar)), userInfo: nil, repeats: true)
@@ -77,7 +92,7 @@ class VistaMarchando: UIViewController, CLLocationManagerDelegate {
     @objc func currentLocationGuardar() {
         //a veces saca nil
         if locationManager.location?.coordinate != nil {
-            print(locationManager.location!.coordinate)
+            print("Guadando loc => \(locationManager.location!.coordinate)")
             localizacionesArray.append(GeoPoint(latitude: locationManager.location!.coordinate.latitude, longitude: locationManager.location!.coordinate.longitude))
         }
         
@@ -85,9 +100,7 @@ class VistaMarchando: UIViewController, CLLocationManagerDelegate {
   
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         locationManager.stopUpdatingLocation()
-        if((error) != nil){
-            print(error)
-        }
+        print("didFailWithError => \(error)")
     }
     
     //funcion para bucle contador, sume mas 1
@@ -98,7 +111,6 @@ class VistaMarchando: UIViewController, CLLocationManagerDelegate {
     @objc func contadorSuma() {
         contador += 1
         tiempoLabel.text = pasarBonitoElTiempo(time: TimeInterval(contador))
-       //print(contador)
     }
     //dejarlo bonito
     func pasarBonitoElTiempo(time:TimeInterval) -> String {
@@ -107,17 +119,17 @@ class VistaMarchando: UIViewController, CLLocationManagerDelegate {
         let seconds = Int(time) % 60
         return String(format: "%02i:%02i:%02i", hours, minutes, seconds)
     }
-    
-    
     @IBOutlet weak var tiempoLabel: UILabel!
     
-    //cuando se pulse cambie de estado el propio boton y el timeLabel.
+    
+    //cuando se pulse cambie de estado el propio boton .
     @IBOutlet weak var pausaNombre: UIButton!
     @IBOutlet weak var reanudarNombre: UIButton!
     @IBOutlet weak var stopNombre: UIButton!
     
     // 0 no funciona, 1 funciona
     var estadoBotonPausa: Int = 0
+    var t: TimeInterval = 0
     
     @IBAction func reanudarBoton(_ sender: Any) {
         if estadoBotonPausa == 0 {
@@ -156,14 +168,16 @@ class VistaMarchando: UIViewController, CLLocationManagerDelegate {
         
         let defaultAction = UIAlertAction(title: "Aceptar", style: .default){
             (action) in
-            //que ocurre
-                //self.pausaNombre.isEnabled = false
+            //que ocurre            
             vControl = 1
             print("aceptar")
             if vControl == 1 {
                 print("Prepare segue")
                 //que se ejecute el segue y se guarde la localizacion mas actual en el tiempo, para ser lo mas preciso posible
                 self.currentLocationGuardar()
+                self.intervalo.invalidate() //terminar con el bucle de Timer
+                //la fecha de que acaba.
+                self.recorrido.fechaFin = Date.init()
                 self.performSegue(withIdentifier: "aMapa", sender: self)                
             }
         }     
@@ -204,15 +218,13 @@ class VistaMarchando: UIViewController, CLLocationManagerDelegate {
             
             //tenemos el array de localizaciones
             recorrido.localizaciones = localizacionesArray
-            //la fecha de que acaba.
-            recorrido.fechaFin = Date.init()
             //el tiempo que ha tardado, por ahora lo cojo del tiempo.
             recorrido.tiempoT = contador //pasa solo los segundos, es por el tema del historial y como se guarda el tiempo. La conversion se hace en detalles.
             
-            
             //pasar al destino el recorrido
             destino.recorrido = self.recorrido
-            destino.subirDatos = true
+            
+            destino.ventana = "Marchando"
             
             
         }else{
