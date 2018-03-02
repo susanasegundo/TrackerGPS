@@ -94,11 +94,13 @@ class VistaHistorial: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath) as! CeldaHistorial
         cell.botonVer.isEnabled = true
+        cell.botonVer.setBackgroundImage(#imageLiteral(resourceName: "botonVerVerde"), for: UIControlState.normal)
         
     }
     override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath) as! CeldaHistorial
         cell.botonVer.isEnabled = false
+        cell.botonVer.setBackgroundImage(#imageLiteral(resourceName: "botonVer"), for: UIControlState.normal)
 
     }
 
@@ -151,6 +153,9 @@ class VistaHistorial: UITableViewController {
             //se deshabilita para que al volver atras y darle otra vez al boton no salga nil.
             let cell = tableView.cellForRow(at: tableView.indexPathForSelectedRow!) as! CeldaHistorial
             cell.botonVer.isEnabled = false
+            cell.botonVer.setBackgroundImage(#imageLiteral(resourceName: "botonVer"), for: UIControlState.normal)
+
+            destino.ventana = "Historial"
             
         }else{}
         

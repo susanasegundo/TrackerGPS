@@ -14,25 +14,85 @@ import CoreLocation
 class VistaMapa: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate {    
     
     var recorrido: Recorrido = Recorrido()
+    //variables de control de ventanas
+    var ventana = ""
     var subirDatos: Bool = false
     //variable para la distancia del recorrido
     var distanciaTotal: Double = 0
     
+    @IBOutlet weak var toolbar: UIToolbar!
+    @IBOutlet weak var botonGuardarLabel: UIBarButtonItem!
+    @IBAction func botonGuardar(_ sender: Any) {
+        if ventana == "Marchando" {
+            subirAFirebase()
+            botonGuardarLabel.isEnabled = false
+            botonGuardarLabel.tintColor = .gray
+            showToast(message: "Guardando en el servidor...")
+            
+        }
+    }
+    @objc func popRootViewController()  {
+        self.navigationController?.popToRootViewController(animated: true)
+           }
     @IBOutlet var mapView: MKMapView!
     @IBAction func botonVolver(_ sender: Any) {
-        self.navigationController?.popToRootViewController(animated: true)
+        switch ventana {
+        case "Marchando":
+            
+            if botonGuardarLabel.isEnabled {
+                //avisar por si no a guardado
+                //Se va a mostrar un mensaje de alerta
+                var vControl = 0
+                let defaultAction = UIAlertAction(title: "Aceptar", style: .default){
+                    (action) in
+                    //que ocurre
+                    vControl = 1
+                    if vControl == 1 {
+                        self.botonGuardar(self)
+                         _ = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: (#selector(VistaMapa.popRootViewController)), userInfo: nil, repeats: false)
+                    }
+                }
+                
+                let cancelAction = UIAlertAction(title: "Volver", style: .cancel){
+                    (action) in  //respond to user selection of the action
+                    self.navigationController?.popToRootViewController(animated: true)
+                }
+                //crear y configurar el controlador de alerta
+                let alert = UIAlertController(title: "¿Está seguro de volver sin guardar?", message: """
+        Aceptar para guardar y volver.
+        Volver para ir sin guardar.
+        """
+                    ,  preferredStyle: .alert )
+                alert.addAction(defaultAction)
+                alert.addAction(cancelAction)
+                //para que salga el mensaje o se "presente" en pantalla
+                self.present(alert,animated: true)
+            }
+            else {
+                self.navigationController?.popToRootViewController(animated: true)
+            }
+            
+            
+        case "Historial":
+            self.navigationController?.popViewController(animated: true)
+        default:
+            print("Fallo de ventana")
+        }
+        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         addAnotations()
+        if ventana != "Marchando"{
+            toolbar.isHidden = true
+        }
+        //centrar mapa en el primer punto
         mapView.region.center = CLLocationCoordinate2D(latitude: recorrido.localizaciones[0].latitude, longitude: recorrido.localizaciones[0].longitude)
         mapView.region.span = MKCoordinateSpan(latitudeDelta: 0.04, longitudeDelta: 0.04)
         
-        if(subirDatos) {
-            subirAFirebase()
-        }
+        
     }
     
     //subir a firebase
@@ -54,10 +114,7 @@ class VistaMapa: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate {
                 print("Document added with ID: \(ref!.documentID)")
             }
         }
-    }
-    
-    
-    
+    }   
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -102,7 +159,7 @@ class VistaMapa: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate {
         mapView?.add(polyline)
         mapView?.delegate = self        
         
-        mapView(mapView, rendererFor: polyline)
+        //mapView(mapView, rendererFor: polyline)
         
     }
     
@@ -149,6 +206,24 @@ class VistaMapa: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate {
         }else{}
     }
     
+    func showToast(message: String){
+        let toastLabel = UILabel(frame: CGRect(x: self.view.frame.size.width/2 - 125, y: self.view.frame.size.height-100, width: 250, height: 35))
+        toastLabel.backgroundColor = UIColor.black.withAlphaComponent(0.6)
+        toastLabel.textColor = UIColor.white
+        toastLabel.textAlignment = .center
+        //toastLabel.font = UIFont(name: "Montserrat-Light", size 12.0)
+        toastLabel.text = message
+        toastLabel.alpha = 1.0
+        toastLabel.layer.cornerRadius = 10
+        toastLabel.clipsToBounds = true
+        self.view.addSubview(toastLabel)
+        UIView.animate(withDuration: 4.0, delay: 0.1, options: .curveEaseOut, animations: {
+            toastLabel.alpha = 0.0
+        }, completion: {
+            (isCompleted) in toastLabel.removeFromSuperview()
+        })
+        
+    }
 
     
     
