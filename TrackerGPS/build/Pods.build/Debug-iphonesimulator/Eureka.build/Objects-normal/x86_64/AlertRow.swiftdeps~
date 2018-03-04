@@ -1,0 +1,162 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "_AlertRow"
+- "AlertRow"
+provides-nominal:
+- "6Eureka9_AlertRowC"
+- "6Eureka8AlertRowC"
+provides-member:
+- ["6Eureka9_AlertRowC", ""]
+- ["6Eureka8AlertRowC", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- !private "!"
+- "AlertOptionsRow"
+- "AlertRow"
+- "AlertSelectorCell"
+- "AssignmentPrecedence"
+- "BaseCell"
+- "CellType"
+- "Equatable"
+- "FormViewController"
+- "PresentationMode"
+- "PresenterRowType"
+- "RowType"
+- "SelectorAlertController"
+- "String"
+- "_AlertRow"
+- !private "isDisabled"
+depends-member:
+- ["6Eureka8AlertRowC", "String"]
+- ["6Eureka8AlertRowC", "deinit"]
+- ["6Eureka8AlertRowC", "init"]
+- ["6Eureka17AlertSelectorCellC", "deinit"]
+- ["6Eureka8BaseCellC", "deinit"]
+- ["6Eureka11BaseRowTypeP", "Cell"]
+- ["6Eureka11BaseRowTypeP", "PresentedControllerType"]
+- ["6Eureka11BaseRowTypeP", "add"]
+- ["6Eureka11BaseRowTypeP", "baseCell"]
+- ["6Eureka11BaseRowTypeP", "cell"]
+- ["6Eureka11BaseRowTypeP", "cellStyle"]
+- ["6Eureka11BaseRowTypeP", "didSelect"]
+- ["6Eureka11BaseRowTypeP", "init"]
+- !private ["6Eureka11BaseRowTypeP", "isDisabled"]
+- ["6Eureka11BaseRowTypeP", "onPresentCallback"]
+- ["6Eureka11BaseRowTypeP", "presentationMode"]
+- ["6Eureka11BaseRowTypeP", "section"]
+- ["6Eureka11BaseRowTypeP", "tag"]
+- ["6Eureka11BaseRowTypeP", "title"]
+- ["6Eureka11BaseRowTypeP", "updateCell"]
+- ["6Eureka11BaseRowTypeP", "validate"]
+- ["6Eureka11BaseRowTypeP", "value"]
+- ["6Eureka11BaseRowTypeP", ""]
+- ["6Eureka16PresenterRowTypeP", "Cell"]
+- ["6Eureka16PresenterRowTypeP", "PresentedControllerType"]
+- ["6Eureka16PresenterRowTypeP", "add"]
+- ["6Eureka16PresenterRowTypeP", "baseCell"]
+- ["6Eureka16PresenterRowTypeP", "cell"]
+- ["6Eureka16PresenterRowTypeP", "cellStyle"]
+- ["6Eureka16PresenterRowTypeP", "didSelect"]
+- ["6Eureka16PresenterRowTypeP", "init"]
+- !private ["6Eureka16PresenterRowTypeP", "isDisabled"]
+- ["6Eureka16PresenterRowTypeP", "onPresentCallback"]
+- ["6Eureka16PresenterRowTypeP", "presentationMode"]
+- ["6Eureka16PresenterRowTypeP", "section"]
+- ["6Eureka16PresenterRowTypeP", "tag"]
+- ["6Eureka16PresenterRowTypeP", "title"]
+- ["6Eureka16PresenterRowTypeP", "updateCell"]
+- ["6Eureka16PresenterRowTypeP", "validate"]
+- ["6Eureka16PresenterRowTypeP", "value"]
+- ["6Eureka16PresenterRowTypeP", ""]
+- ["6Eureka7RowTypeP", "init"]
+- ["6Eureka7RowTypeP", ""]
+- ["6Eureka8TaggableP", "Cell"]
+- ["6Eureka8TaggableP", "PresentedControllerType"]
+- ["6Eureka8TaggableP", "add"]
+- ["6Eureka8TaggableP", "baseCell"]
+- ["6Eureka8TaggableP", "cell"]
+- ["6Eureka8TaggableP", "cellStyle"]
+- ["6Eureka8TaggableP", "didSelect"]
+- ["6Eureka8TaggableP", "init"]
+- !private ["6Eureka8TaggableP", "isDisabled"]
+- ["6Eureka8TaggableP", "onPresentCallback"]
+- ["6Eureka8TaggableP", "presentationMode"]
+- ["6Eureka8TaggableP", "section"]
+- ["6Eureka8TaggableP", "tag"]
+- ["6Eureka8TaggableP", "title"]
+- ["6Eureka8TaggableP", "updateCell"]
+- ["6Eureka8TaggableP", "validate"]
+- ["6Eureka8TaggableP", "value"]
+- ["6Eureka8TaggableP", ""]
+- ["6Eureka12TypedRowTypeP", "Cell"]
+- ["6Eureka12TypedRowTypeP", "PresentedControllerType"]
+- ["6Eureka12TypedRowTypeP", "add"]
+- ["6Eureka12TypedRowTypeP", "baseCell"]
+- ["6Eureka12TypedRowTypeP", "cell"]
+- ["6Eureka12TypedRowTypeP", "cellStyle"]
+- ["6Eureka12TypedRowTypeP", "didSelect"]
+- ["6Eureka12TypedRowTypeP", "init"]
+- !private ["6Eureka12TypedRowTypeP", "isDisabled"]
+- ["6Eureka12TypedRowTypeP", "onPresentCallback"]
+- ["6Eureka12TypedRowTypeP", "presentationMode"]
+- ["6Eureka12TypedRowTypeP", "section"]
+- ["6Eureka12TypedRowTypeP", "tag"]
+- ["6Eureka12TypedRowTypeP", "title"]
+- ["6Eureka12TypedRowTypeP", "updateCell"]
+- ["6Eureka12TypedRowTypeP", "validate"]
+- ["6Eureka12TypedRowTypeP", "value"]
+- ["6Eureka12TypedRowTypeP", ""]
+- ["6Eureka9_AlertRowC", "Cell"]
+- ["6Eureka9_AlertRowC", "FormViewController"]
+- ["6Eureka9_AlertRowC", "PresentationMode"]
+- ["6Eureka9_AlertRowC", "PresentedController"]
+- ["6Eureka9_AlertRowC", "PresentedControllerType"]
+- ["6Eureka9_AlertRowC", "SelectorAlertController"]
+- ["6Eureka9_AlertRowC", "String"]
+- ["6Eureka9_AlertRowC", "_AlertRow"]
+- ["6Eureka9_AlertRowC", "add"]
+- ["6Eureka9_AlertRowC", "baseCell"]
+- ["6Eureka9_AlertRowC", "cell"]
+- ["6Eureka9_AlertRowC", "cellStyle"]
+- ["6Eureka9_AlertRowC", "customDidSelect"]
+- ["6Eureka9_AlertRowC", "deinit"]
+- ["6Eureka9_AlertRowC", "didSelect"]
+- ["6Eureka9_AlertRowC", "init"]
+- !private ["6Eureka9_AlertRowC", "isDisabled"]
+- ["6Eureka9_AlertRowC", "onPresentCallback"]
+- ["6Eureka9_AlertRowC", "presentationMode"]
+- ["6Eureka9_AlertRowC", "section"]
+- ["6Eureka9_AlertRowC", "tag"]
+- ["6Eureka9_AlertRowC", "title"]
+- ["6Eureka9_AlertRowC", "updateCell"]
+- ["6Eureka9_AlertRowC", "validate"]
+- ["6Eureka9_AlertRowC", "value"]
+- ["6Eureka9_AlertRowC", ""]
+depends-nominal:
+- "6Eureka8AlertRowC"
+- "6Eureka17AlertSelectorCellC"
+- "6Eureka8BaseCellC"
+- "6Eureka11BaseRowTypeP"
+- "6Eureka16PresenterRowTypeP"
+- "6Eureka7RowTypeP"
+- "6Eureka8TaggableP"
+- "6Eureka12TypedRowTypeP"
+- "6Eureka9_AlertRowC"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/Pods/Target Support Files/Eureka/Eureka-umbrella.h"
+- "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/build/Pods.build/Debug-iphonesimulator/Eureka.build/unextended-module.modulemap"
+interface-hash: "8f4238096dc905eeea9bad0991814c5a"

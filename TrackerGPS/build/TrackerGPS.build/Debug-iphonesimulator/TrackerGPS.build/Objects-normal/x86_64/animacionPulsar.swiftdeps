@@ -1,0 +1,896 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "Pulsing"
+provides-nominal:
+- "10TrackerGPS7PulsingC"
+provides-member:
+- ["10TrackerGPS7PulsingC", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- !private "*"
+- !private "+"
+- !private "Array"
+- "AssignmentPrecedence"
+- "CAAnimationGroup"
+- "CABasicAnimation"
+- "CAKeyframeAnimation"
+- "CALayer"
+- !private "CAMediaTimingFunction"
+- "CGFloat"
+- "CGPoint"
+- !private "CGRect"
+- !private "DispatchQoS"
+- !private "DispatchQueue"
+- "Float"
+- "NSCoder"
+- !private "NSNumber"
+- "Pulsing"
+- "StringLiteralType"
+- "TimeInterval"
+- !private "UIColor"
+- !private "UIScreen"
+- !private "kCAMediaTimingFunctionDefault"
+depends-member:
+- !private ["s23BidirectionalCollectionP", "init"]
+- ["s19BinaryFloatingPointP", "infinity"]
+- !private ["So8CAActionP", "animations"]
+- !private ["So8CAActionP", "duration"]
+- !private ["So8CAActionP", "fromValue"]
+- ["So8CAActionP", "init"]
+- !private ["So8CAActionP", "keyTimes"]
+- !private ["So8CAActionP", "repeatCount"]
+- !private ["So8CAActionP", "timingFunction"]
+- !private ["So8CAActionP", "toValue"]
+- !private ["So8CAActionP", "values"]
+- !private ["So11CAAnimationC", "animations"]
+- !private ["So11CAAnimationC", "duration"]
+- !private ["So11CAAnimationC", "fromValue"]
+- ["So11CAAnimationC", "init"]
+- !private ["So11CAAnimationC", "keyTimes"]
+- !private ["So11CAAnimationC", "repeatCount"]
+- !private ["So11CAAnimationC", "timingFunction"]
+- !private ["So11CAAnimationC", "toValue"]
+- !private ["So11CAAnimationC", "values"]
+- !private ["So16CAAnimationGroupC", "animations"]
+- !private ["So16CAAnimationGroupC", "duration"]
+- ["So16CAAnimationGroupC", "init"]
+- !private ["So16CAAnimationGroupC", "repeatCount"]
+- !private ["So16CAAnimationGroupC", "timingFunction"]
+- !private ["So16CABasicAnimationC", "duration"]
+- !private ["So16CABasicAnimationC", "fromValue"]
+- !private ["So16CABasicAnimationC", "init"]
+- !private ["So16CABasicAnimationC", "toValue"]
+- !private ["So19CAKeyframeAnimationC", "duration"]
+- !private ["So19CAKeyframeAnimationC", "init"]
+- !private ["So19CAKeyframeAnimationC", "keyTimes"]
+- !private ["So19CAKeyframeAnimationC", "values"]
+- ["So7CALayerC", "CAAnimationGroup"]
+- ["So7CALayerC", "CABasicAnimation"]
+- ["So7CALayerC", "CAKeyframeAnimation"]
+- !private ["So7CALayerC", "CAMediaTimingFunction"]
+- ["So7CALayerC", "CGFloat"]
+- ["So7CALayerC", "CGPoint"]
+- !private ["So7CALayerC", "CGRect"]
+- !private ["So7CALayerC", "DispatchQoS"]
+- !private ["So7CALayerC", "DispatchQueue"]
+- ["So7CALayerC", "Float"]
+- ["So7CALayerC", "NSCoder"]
+- !private ["So7CALayerC", "NSNumber"]
+- ["So7CALayerC", "TimeInterval"]
+- !private ["So7CALayerC", "UIColor"]
+- !private ["So7CALayerC", "UIScreen"]
+- !private ["So7CALayerC", "add"]
+- ["So7CALayerC", "animationDuration"]
+- ["So7CALayerC", "animationGroup"]
+- !private ["So7CALayerC", "backgroundColor"]
+- !private ["So7CALayerC", "bounds"]
+- !private ["So7CALayerC", "contentsScale"]
+- !private ["So7CALayerC", "cornerRadius"]
+- ["So7CALayerC", "createOpacityAnimation"]
+- ["So7CALayerC", "createScaleAnimation"]
+- ["So7CALayerC", "init"]
+- ["So7CALayerC", "initialPulseScale"]
+- !private ["So7CALayerC", "kCAMediaTimingFunctionDefault"]
+- ["So7CALayerC", "nextPulseAfter"]
+- ["So7CALayerC", "numberOfPulses"]
+- !private ["So7CALayerC", "opacity"]
+- !private ["So7CALayerC", "position"]
+- ["So7CALayerC", "radius"]
+- ["So7CALayerC", "setupAnimationGroup"]
+- ["So7CALayerC", ""]
+- ["So13CAMediaTimingP", "CAAnimationGroup"]
+- !private ["So13CAMediaTimingP", "CABasicAnimation"]
+- !private ["So13CAMediaTimingP", "CAKeyframeAnimation"]
+- !private ["So13CAMediaTimingP", "CAMediaTimingFunction"]
+- !private ["So13CAMediaTimingP", "CGRect"]
+- !private ["So13CAMediaTimingP", "DispatchQoS"]
+- !private ["So13CAMediaTimingP", "DispatchQueue"]
+- ["So13CAMediaTimingP", "Float"]
+- !private ["So13CAMediaTimingP", "NSNumber"]
+- !private ["So13CAMediaTimingP", "UIColor"]
+- !private ["So13CAMediaTimingP", "UIScreen"]
+- !private ["So13CAMediaTimingP", "add"]
+- !private ["So13CAMediaTimingP", "animationDuration"]
+- !private ["So13CAMediaTimingP", "animationGroup"]
+- !private ["So13CAMediaTimingP", "animations"]
+- !private ["So13CAMediaTimingP", "backgroundColor"]
+- !private ["So13CAMediaTimingP", "bounds"]
+- !private ["So13CAMediaTimingP", "contentsScale"]
+- !private ["So13CAMediaTimingP", "cornerRadius"]
+- !private ["So13CAMediaTimingP", "createOpacityAnimation"]
+- !private ["So13CAMediaTimingP", "createScaleAnimation"]
+- !private ["So13CAMediaTimingP", "duration"]
+- !private ["So13CAMediaTimingP", "fromValue"]
+- ["So13CAMediaTimingP", "init"]
+- !private ["So13CAMediaTimingP", "initialPulseScale"]
+- !private ["So13CAMediaTimingP", "kCAMediaTimingFunctionDefault"]
+- !private ["So13CAMediaTimingP", "keyTimes"]
+- !private ["So13CAMediaTimingP", "nextPulseAfter"]
+- !private ["So13CAMediaTimingP", "numberOfPulses"]
+- !private ["So13CAMediaTimingP", "opacity"]
+- !private ["So13CAMediaTimingP", "position"]
+- !private ["So13CAMediaTimingP", "radius"]
+- !private ["So13CAMediaTimingP", "repeatCount"]
+- !private ["So13CAMediaTimingP", "setupAnimationGroup"]
+- !private ["So13CAMediaTimingP", "timingFunction"]
+- !private ["So13CAMediaTimingP", "toValue"]
+- !private ["So13CAMediaTimingP", "values"]
+- ["So13CAMediaTimingP", ""]
+- !private ["So21CAMediaTimingFunctionC", "init"]
+- !private ["So19CAPropertyAnimationC", "duration"]
+- !private ["So19CAPropertyAnimationC", "fromValue"]
+- !private ["So19CAPropertyAnimationC", "init"]
+- !private ["So19CAPropertyAnimationC", "keyTimes"]
+- !private ["So19CAPropertyAnimationC", "toValue"]
+- !private ["So19CAPropertyAnimationC", "values"]
+- !private ["SC6CGRectV", "init"]
+- ["s7CVarArgP", "CAAnimationGroup"]
+- !private ["s7CVarArgP", "CABasicAnimation"]
+- !private ["s7CVarArgP", "CAKeyframeAnimation"]
+- !private ["s7CVarArgP", "CAMediaTimingFunction"]
+- !private ["s7CVarArgP", "CGRect"]
+- !private ["s7CVarArgP", "DispatchQoS"]
+- !private ["s7CVarArgP", "DispatchQueue"]
+- ["s7CVarArgP", "Float"]
+- !private ["s7CVarArgP", "NSNumber"]
+- !private ["s7CVarArgP", "UIColor"]
+- !private ["s7CVarArgP", "UIScreen"]
+- !private ["s7CVarArgP", "add"]
+- !private ["s7CVarArgP", "animationDuration"]
+- !private ["s7CVarArgP", "animationGroup"]
+- !private ["s7CVarArgP", "animations"]
+- !private ["s7CVarArgP", "async"]
+- !private ["s7CVarArgP", "backgroundColor"]
+- !private ["s7CVarArgP", "black"]
+- !private ["s7CVarArgP", "bounds"]
+- !private ["s7CVarArgP", "cgColor"]
+- !private ["s7CVarArgP", "contentsScale"]
+- !private ["s7CVarArgP", "cornerRadius"]
+- !private ["s7CVarArgP", "createOpacityAnimation"]
+- !private ["s7CVarArgP", "createScaleAnimation"]
+- !private ["s7CVarArgP", "duration"]
+- !private ["s7CVarArgP", "fromValue"]
+- !private ["s7CVarArgP", "global"]
+- ["s7CVarArgP", "infinity"]
+- ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "initialPulseScale"]
+- !private ["s7CVarArgP", "kCAMediaTimingFunctionDefault"]
+- !private ["s7CVarArgP", "keyTimes"]
+- !private ["s7CVarArgP", "main"]
+- !private ["s7CVarArgP", "nextPulseAfter"]
+- !private ["s7CVarArgP", "numberOfPulses"]
+- !private ["s7CVarArgP", "opacity"]
+- !private ["s7CVarArgP", "position"]
+- !private ["s7CVarArgP", "radius"]
+- !private ["s7CVarArgP", "repeatCount"]
+- !private ["s7CVarArgP", "scale"]
+- !private ["s7CVarArgP", "setupAnimationGroup"]
+- !private ["s7CVarArgP", "timingFunction"]
+- !private ["s7CVarArgP", "toValue"]
+- !private ["s7CVarArgP", "values"]
+- ["s7CVarArgP", ""]
+- !private ["s10CollectionP", "init"]
+- ["s10ComparableP", "infinity"]
+- !private ["s10ComparableP", "init"]
+- ["s28CustomDebugStringConvertibleP", "CAAnimationGroup"]
+- !private ["s28CustomDebugStringConvertibleP", "CABasicAnimation"]
+- !private ["s28CustomDebugStringConvertibleP", "CAKeyframeAnimation"]
+- !private ["s28CustomDebugStringConvertibleP", "CAMediaTimingFunction"]
+- !private ["s28CustomDebugStringConvertibleP", "CGRect"]
+- !private ["s28CustomDebugStringConvertibleP", "DispatchQoS"]
+- !private ["s28CustomDebugStringConvertibleP", "DispatchQueue"]
+- ["s28CustomDebugStringConvertibleP", "Float"]
+- !private ["s28CustomDebugStringConvertibleP", "NSNumber"]
+- !private ["s28CustomDebugStringConvertibleP", "UIColor"]
+- !private ["s28CustomDebugStringConvertibleP", "UIScreen"]
+- !private ["s28CustomDebugStringConvertibleP", "add"]
+- !private ["s28CustomDebugStringConvertibleP", "animationDuration"]
+- !private ["s28CustomDebugStringConvertibleP", "animationGroup"]
+- !private ["s28CustomDebugStringConvertibleP", "animations"]
+- !private ["s28CustomDebugStringConvertibleP", "async"]
+- !private ["s28CustomDebugStringConvertibleP", "backgroundColor"]
+- !private ["s28CustomDebugStringConvertibleP", "black"]
+- !private ["s28CustomDebugStringConvertibleP", "bounds"]
+- !private ["s28CustomDebugStringConvertibleP", "cgColor"]
+- !private ["s28CustomDebugStringConvertibleP", "contentsScale"]
+- !private ["s28CustomDebugStringConvertibleP", "cornerRadius"]
+- !private ["s28CustomDebugStringConvertibleP", "createOpacityAnimation"]
+- !private ["s28CustomDebugStringConvertibleP", "createScaleAnimation"]
+- !private ["s28CustomDebugStringConvertibleP", "duration"]
+- !private ["s28CustomDebugStringConvertibleP", "fromValue"]
+- !private ["s28CustomDebugStringConvertibleP", "global"]
+- ["s28CustomDebugStringConvertibleP", "infinity"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "initialPulseScale"]
+- !private ["s28CustomDebugStringConvertibleP", "kCAMediaTimingFunctionDefault"]
+- !private ["s28CustomDebugStringConvertibleP", "keyTimes"]
+- !private ["s28CustomDebugStringConvertibleP", "main"]
+- !private ["s28CustomDebugStringConvertibleP", "nextPulseAfter"]
+- !private ["s28CustomDebugStringConvertibleP", "numberOfPulses"]
+- !private ["s28CustomDebugStringConvertibleP", "opacity"]
+- !private ["s28CustomDebugStringConvertibleP", "position"]
+- !private ["s28CustomDebugStringConvertibleP", "radius"]
+- !private ["s28CustomDebugStringConvertibleP", "repeatCount"]
+- !private ["s28CustomDebugStringConvertibleP", "scale"]
+- !private ["s28CustomDebugStringConvertibleP", "setupAnimationGroup"]
+- !private ["s28CustomDebugStringConvertibleP", "timingFunction"]
+- !private ["s28CustomDebugStringConvertibleP", "toValue"]
+- !private ["s28CustomDebugStringConvertibleP", "values"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- ["s29CustomPlaygroundQuickLookableP", "infinity"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- ["s17CustomReflectableP", "infinity"]
+- !private ["s17CustomReflectableP", "init"]
+- ["s23CustomStringConvertibleP", "CAAnimationGroup"]
+- !private ["s23CustomStringConvertibleP", "CABasicAnimation"]
+- !private ["s23CustomStringConvertibleP", "CAKeyframeAnimation"]
+- !private ["s23CustomStringConvertibleP", "CAMediaTimingFunction"]
+- !private ["s23CustomStringConvertibleP", "CGRect"]
+- !private ["s23CustomStringConvertibleP", "DispatchQoS"]
+- !private ["s23CustomStringConvertibleP", "DispatchQueue"]
+- ["s23CustomStringConvertibleP", "Float"]
+- !private ["s23CustomStringConvertibleP", "NSNumber"]
+- !private ["s23CustomStringConvertibleP", "UIColor"]
+- !private ["s23CustomStringConvertibleP", "UIScreen"]
+- !private ["s23CustomStringConvertibleP", "add"]
+- !private ["s23CustomStringConvertibleP", "animationDuration"]
+- !private ["s23CustomStringConvertibleP", "animationGroup"]
+- !private ["s23CustomStringConvertibleP", "animations"]
+- !private ["s23CustomStringConvertibleP", "async"]
+- !private ["s23CustomStringConvertibleP", "backgroundColor"]
+- !private ["s23CustomStringConvertibleP", "black"]
+- !private ["s23CustomStringConvertibleP", "bounds"]
+- !private ["s23CustomStringConvertibleP", "cgColor"]
+- !private ["s23CustomStringConvertibleP", "contentsScale"]
+- !private ["s23CustomStringConvertibleP", "cornerRadius"]
+- !private ["s23CustomStringConvertibleP", "createOpacityAnimation"]
+- !private ["s23CustomStringConvertibleP", "createScaleAnimation"]
+- !private ["s23CustomStringConvertibleP", "duration"]
+- !private ["s23CustomStringConvertibleP", "fromValue"]
+- !private ["s23CustomStringConvertibleP", "global"]
+- ["s23CustomStringConvertibleP", "infinity"]
+- ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "initialPulseScale"]
+- !private ["s23CustomStringConvertibleP", "kCAMediaTimingFunctionDefault"]
+- !private ["s23CustomStringConvertibleP", "keyTimes"]
+- !private ["s23CustomStringConvertibleP", "main"]
+- !private ["s23CustomStringConvertibleP", "nextPulseAfter"]
+- !private ["s23CustomStringConvertibleP", "numberOfPulses"]
+- !private ["s23CustomStringConvertibleP", "opacity"]
+- !private ["s23CustomStringConvertibleP", "position"]
+- !private ["s23CustomStringConvertibleP", "radius"]
+- !private ["s23CustomStringConvertibleP", "repeatCount"]
+- !private ["s23CustomStringConvertibleP", "scale"]
+- !private ["s23CustomStringConvertibleP", "setupAnimationGroup"]
+- !private ["s23CustomStringConvertibleP", "timingFunction"]
+- !private ["s23CustomStringConvertibleP", "toValue"]
+- !private ["s23CustomStringConvertibleP", "values"]
+- ["s23CustomStringConvertibleP", ""]
+- ["s9DecodableP", "infinity"]
+- !private ["s9DecodableP", "init"]
+- !private ["So14DispatchObjectC", "async"]
+- !private ["So14DispatchObjectC", "global"]
+- !private ["So14DispatchObjectC", "main"]
+- !private ["8Dispatch0A3QoSV", "QoSClass"]
+- !private ["So13DispatchQueueC", "async"]
+- !private ["So13DispatchQueueC", "global"]
+- !private ["So13DispatchQueueC", "main"]
+- ["s9EncodableP", "infinity"]
+- !private ["s9EncodableP", "init"]
+- ["s9EquatableP", "CAAnimationGroup"]
+- !private ["s9EquatableP", "CABasicAnimation"]
+- !private ["s9EquatableP", "CAKeyframeAnimation"]
+- !private ["s9EquatableP", "CAMediaTimingFunction"]
+- !private ["s9EquatableP", "CGRect"]
+- !private ["s9EquatableP", "DispatchQoS"]
+- !private ["s9EquatableP", "DispatchQueue"]
+- ["s9EquatableP", "Float"]
+- !private ["s9EquatableP", "NSNumber"]
+- !private ["s9EquatableP", "QoSClass"]
+- !private ["s9EquatableP", "UIColor"]
+- !private ["s9EquatableP", "UIScreen"]
+- !private ["s9EquatableP", "add"]
+- !private ["s9EquatableP", "animationDuration"]
+- !private ["s9EquatableP", "animationGroup"]
+- !private ["s9EquatableP", "animations"]
+- !private ["s9EquatableP", "async"]
+- !private ["s9EquatableP", "backgroundColor"]
+- !private ["s9EquatableP", "black"]
+- !private ["s9EquatableP", "bounds"]
+- !private ["s9EquatableP", "cgColor"]
+- !private ["s9EquatableP", "contentsScale"]
+- !private ["s9EquatableP", "cornerRadius"]
+- !private ["s9EquatableP", "createOpacityAnimation"]
+- !private ["s9EquatableP", "createScaleAnimation"]
+- !private ["s9EquatableP", "default"]
+- !private ["s9EquatableP", "duration"]
+- !private ["s9EquatableP", "fromValue"]
+- !private ["s9EquatableP", "global"]
+- ["s9EquatableP", "infinity"]
+- ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "initialPulseScale"]
+- !private ["s9EquatableP", "kCAMediaTimingFunctionDefault"]
+- !private ["s9EquatableP", "keyTimes"]
+- !private ["s9EquatableP", "main"]
+- !private ["s9EquatableP", "nextPulseAfter"]
+- !private ["s9EquatableP", "numberOfPulses"]
+- !private ["s9EquatableP", "opacity"]
+- !private ["s9EquatableP", "position"]
+- !private ["s9EquatableP", "radius"]
+- !private ["s9EquatableP", "repeatCount"]
+- !private ["s9EquatableP", "scale"]
+- !private ["s9EquatableP", "setupAnimationGroup"]
+- !private ["s9EquatableP", "timingFunction"]
+- !private ["s9EquatableP", "toValue"]
+- !private ["s9EquatableP", "values"]
+- ["s9EquatableP", ""]
+- !private ["s27ExpressibleByBooleanLiteralP", "init"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- ["s25ExpressibleByFloatLiteralP", "infinity"]
+- !private ["s25ExpressibleByFloatLiteralP", "init"]
+- ["s27ExpressibleByIntegerLiteralP", "infinity"]
+- !private ["s27ExpressibleByIntegerLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- ["Sf", "infinity"]
+- ["s13FloatingPointP", "infinity"]
+- ["s8HashableP", "CAAnimationGroup"]
+- !private ["s8HashableP", "CABasicAnimation"]
+- !private ["s8HashableP", "CAKeyframeAnimation"]
+- !private ["s8HashableP", "CAMediaTimingFunction"]
+- !private ["s8HashableP", "CGRect"]
+- !private ["s8HashableP", "DispatchQoS"]
+- !private ["s8HashableP", "DispatchQueue"]
+- ["s8HashableP", "Float"]
+- !private ["s8HashableP", "NSNumber"]
+- !private ["s8HashableP", "UIColor"]
+- !private ["s8HashableP", "UIScreen"]
+- !private ["s8HashableP", "add"]
+- !private ["s8HashableP", "animationDuration"]
+- !private ["s8HashableP", "animationGroup"]
+- !private ["s8HashableP", "animations"]
+- !private ["s8HashableP", "async"]
+- !private ["s8HashableP", "backgroundColor"]
+- !private ["s8HashableP", "black"]
+- !private ["s8HashableP", "bounds"]
+- !private ["s8HashableP", "cgColor"]
+- !private ["s8HashableP", "contentsScale"]
+- !private ["s8HashableP", "cornerRadius"]
+- !private ["s8HashableP", "createOpacityAnimation"]
+- !private ["s8HashableP", "createScaleAnimation"]
+- !private ["s8HashableP", "default"]
+- !private ["s8HashableP", "duration"]
+- !private ["s8HashableP", "fromValue"]
+- !private ["s8HashableP", "global"]
+- ["s8HashableP", "infinity"]
+- ["s8HashableP", "init"]
+- !private ["s8HashableP", "initialPulseScale"]
+- !private ["s8HashableP", "kCAMediaTimingFunctionDefault"]
+- !private ["s8HashableP", "keyTimes"]
+- !private ["s8HashableP", "main"]
+- !private ["s8HashableP", "nextPulseAfter"]
+- !private ["s8HashableP", "numberOfPulses"]
+- !private ["s8HashableP", "opacity"]
+- !private ["s8HashableP", "position"]
+- !private ["s8HashableP", "radius"]
+- !private ["s8HashableP", "repeatCount"]
+- !private ["s8HashableP", "scale"]
+- !private ["s8HashableP", "setupAnimationGroup"]
+- !private ["s8HashableP", "timingFunction"]
+- !private ["s8HashableP", "toValue"]
+- !private ["s8HashableP", "values"]
+- ["s8HashableP", ""]
+- ["6Eureka18InputTypeInitiableP", "infinity"]
+- !private ["6Eureka18InputTypeInitiableP", "init"]
+- ["s25LosslessStringConvertibleP", "infinity"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s10MirrorPathP", "init"]
+- ["So8NSCodingP", "CAAnimationGroup"]
+- !private ["So8NSCodingP", "CABasicAnimation"]
+- !private ["So8NSCodingP", "CAKeyframeAnimation"]
+- !private ["So8NSCodingP", "CAMediaTimingFunction"]
+- !private ["So8NSCodingP", "CGRect"]
+- !private ["So8NSCodingP", "DispatchQoS"]
+- !private ["So8NSCodingP", "DispatchQueue"]
+- ["So8NSCodingP", "Float"]
+- !private ["So8NSCodingP", "NSNumber"]
+- !private ["So8NSCodingP", "UIColor"]
+- !private ["So8NSCodingP", "UIScreen"]
+- !private ["So8NSCodingP", "add"]
+- !private ["So8NSCodingP", "animationDuration"]
+- !private ["So8NSCodingP", "animationGroup"]
+- !private ["So8NSCodingP", "animations"]
+- !private ["So8NSCodingP", "backgroundColor"]
+- !private ["So8NSCodingP", "black"]
+- !private ["So8NSCodingP", "bounds"]
+- !private ["So8NSCodingP", "cgColor"]
+- !private ["So8NSCodingP", "contentsScale"]
+- !private ["So8NSCodingP", "cornerRadius"]
+- !private ["So8NSCodingP", "createOpacityAnimation"]
+- !private ["So8NSCodingP", "createScaleAnimation"]
+- !private ["So8NSCodingP", "duration"]
+- !private ["So8NSCodingP", "fromValue"]
+- ["So8NSCodingP", "init"]
+- !private ["So8NSCodingP", "initialPulseScale"]
+- !private ["So8NSCodingP", "kCAMediaTimingFunctionDefault"]
+- !private ["So8NSCodingP", "keyTimes"]
+- !private ["So8NSCodingP", "nextPulseAfter"]
+- !private ["So8NSCodingP", "numberOfPulses"]
+- !private ["So8NSCodingP", "opacity"]
+- !private ["So8NSCodingP", "position"]
+- !private ["So8NSCodingP", "radius"]
+- !private ["So8NSCodingP", "repeatCount"]
+- !private ["So8NSCodingP", "setupAnimationGroup"]
+- !private ["So8NSCodingP", "timingFunction"]
+- !private ["So8NSCodingP", "toValue"]
+- !private ["So8NSCodingP", "values"]
+- ["So8NSCodingP", ""]
+- !private ["So9NSCopyingP", "animations"]
+- !private ["So9NSCopyingP", "black"]
+- !private ["So9NSCopyingP", "cgColor"]
+- !private ["So9NSCopyingP", "duration"]
+- !private ["So9NSCopyingP", "fromValue"]
+- ["So9NSCopyingP", "init"]
+- !private ["So9NSCopyingP", "keyTimes"]
+- !private ["So9NSCopyingP", "repeatCount"]
+- !private ["So9NSCopyingP", "timingFunction"]
+- !private ["So9NSCopyingP", "toValue"]
+- !private ["So9NSCopyingP", "values"]
+- !private ["So21NSItemProviderReadingP", "black"]
+- !private ["So21NSItemProviderReadingP", "cgColor"]
+- !private ["So21NSItemProviderReadingP", "init"]
+- !private ["So21NSItemProviderWritingP", "black"]
+- !private ["So21NSItemProviderWritingP", "cgColor"]
+- !private ["So21NSItemProviderWritingP", "init"]
+- !private ["So16NSMutableCopyingP", "init"]
+- !private ["So8NSNumberC", "init"]
+- ["So8NSObjectC", "CAAnimationGroup"]
+- ["So8NSObjectC", "CABasicAnimation"]
+- ["So8NSObjectC", "CAKeyframeAnimation"]
+- !private ["So8NSObjectC", "CAMediaTimingFunction"]
+- ["So8NSObjectC", "CGFloat"]
+- ["So8NSObjectC", "CGPoint"]
+- !private ["So8NSObjectC", "CGRect"]
+- !private ["So8NSObjectC", "DispatchQoS"]
+- !private ["So8NSObjectC", "DispatchQueue"]
+- ["So8NSObjectC", "Float"]
+- ["So8NSObjectC", "NSCoder"]
+- !private ["So8NSObjectC", "NSNumber"]
+- ["So8NSObjectC", "TimeInterval"]
+- !private ["So8NSObjectC", "UIColor"]
+- !private ["So8NSObjectC", "UIScreen"]
+- !private ["So8NSObjectC", "add"]
+- ["So8NSObjectC", "animationDuration"]
+- ["So8NSObjectC", "animationGroup"]
+- !private ["So8NSObjectC", "animations"]
+- !private ["So8NSObjectC", "async"]
+- !private ["So8NSObjectC", "backgroundColor"]
+- !private ["So8NSObjectC", "black"]
+- !private ["So8NSObjectC", "bounds"]
+- !private ["So8NSObjectC", "cgColor"]
+- !private ["So8NSObjectC", "contentsScale"]
+- !private ["So8NSObjectC", "cornerRadius"]
+- ["So8NSObjectC", "createOpacityAnimation"]
+- ["So8NSObjectC", "createScaleAnimation"]
+- !private ["So8NSObjectC", "duration"]
+- !private ["So8NSObjectC", "fromValue"]
+- !private ["So8NSObjectC", "global"]
+- ["So8NSObjectC", "init"]
+- ["So8NSObjectC", "initialPulseScale"]
+- !private ["So8NSObjectC", "kCAMediaTimingFunctionDefault"]
+- !private ["So8NSObjectC", "keyTimes"]
+- !private ["So8NSObjectC", "main"]
+- ["So8NSObjectC", "nextPulseAfter"]
+- ["So8NSObjectC", "numberOfPulses"]
+- !private ["So8NSObjectC", "opacity"]
+- !private ["So8NSObjectC", "position"]
+- ["So8NSObjectC", "radius"]
+- !private ["So8NSObjectC", "repeatCount"]
+- !private ["So8NSObjectC", "scale"]
+- ["So8NSObjectC", "setupAnimationGroup"]
+- !private ["So8NSObjectC", "timingFunction"]
+- !private ["So8NSObjectC", "toValue"]
+- !private ["So8NSObjectC", "values"]
+- ["So16NSObjectProtocolP", "CAAnimationGroup"]
+- !private ["So16NSObjectProtocolP", "CABasicAnimation"]
+- !private ["So16NSObjectProtocolP", "CAKeyframeAnimation"]
+- !private ["So16NSObjectProtocolP", "CAMediaTimingFunction"]
+- !private ["So16NSObjectProtocolP", "CGRect"]
+- !private ["So16NSObjectProtocolP", "DispatchQoS"]
+- !private ["So16NSObjectProtocolP", "DispatchQueue"]
+- ["So16NSObjectProtocolP", "Float"]
+- !private ["So16NSObjectProtocolP", "NSNumber"]
+- !private ["So16NSObjectProtocolP", "UIColor"]
+- !private ["So16NSObjectProtocolP", "UIScreen"]
+- !private ["So16NSObjectProtocolP", "add"]
+- !private ["So16NSObjectProtocolP", "animationDuration"]
+- !private ["So16NSObjectProtocolP", "animationGroup"]
+- !private ["So16NSObjectProtocolP", "animations"]
+- !private ["So16NSObjectProtocolP", "async"]
+- !private ["So16NSObjectProtocolP", "backgroundColor"]
+- !private ["So16NSObjectProtocolP", "black"]
+- !private ["So16NSObjectProtocolP", "bounds"]
+- !private ["So16NSObjectProtocolP", "cgColor"]
+- !private ["So16NSObjectProtocolP", "contentsScale"]
+- !private ["So16NSObjectProtocolP", "cornerRadius"]
+- !private ["So16NSObjectProtocolP", "createOpacityAnimation"]
+- !private ["So16NSObjectProtocolP", "createScaleAnimation"]
+- !private ["So16NSObjectProtocolP", "duration"]
+- !private ["So16NSObjectProtocolP", "fromValue"]
+- !private ["So16NSObjectProtocolP", "global"]
+- ["So16NSObjectProtocolP", "init"]
+- !private ["So16NSObjectProtocolP", "initialPulseScale"]
+- !private ["So16NSObjectProtocolP", "kCAMediaTimingFunctionDefault"]
+- !private ["So16NSObjectProtocolP", "keyTimes"]
+- !private ["So16NSObjectProtocolP", "main"]
+- !private ["So16NSObjectProtocolP", "nextPulseAfter"]
+- !private ["So16NSObjectProtocolP", "numberOfPulses"]
+- !private ["So16NSObjectProtocolP", "opacity"]
+- !private ["So16NSObjectProtocolP", "position"]
+- !private ["So16NSObjectProtocolP", "radius"]
+- !private ["So16NSObjectProtocolP", "repeatCount"]
+- !private ["So16NSObjectProtocolP", "scale"]
+- !private ["So16NSObjectProtocolP", "setupAnimationGroup"]
+- !private ["So16NSObjectProtocolP", "timingFunction"]
+- !private ["So16NSObjectProtocolP", "toValue"]
+- !private ["So16NSObjectProtocolP", "values"]
+- ["So16NSObjectProtocolP", ""]
+- ["So14NSSecureCodingP", "CAAnimationGroup"]
+- !private ["So14NSSecureCodingP", "CABasicAnimation"]
+- !private ["So14NSSecureCodingP", "CAKeyframeAnimation"]
+- !private ["So14NSSecureCodingP", "CAMediaTimingFunction"]
+- !private ["So14NSSecureCodingP", "CGRect"]
+- !private ["So14NSSecureCodingP", "DispatchQoS"]
+- !private ["So14NSSecureCodingP", "DispatchQueue"]
+- ["So14NSSecureCodingP", "Float"]
+- !private ["So14NSSecureCodingP", "NSNumber"]
+- !private ["So14NSSecureCodingP", "UIColor"]
+- !private ["So14NSSecureCodingP", "UIScreen"]
+- !private ["So14NSSecureCodingP", "add"]
+- !private ["So14NSSecureCodingP", "animationDuration"]
+- !private ["So14NSSecureCodingP", "animationGroup"]
+- !private ["So14NSSecureCodingP", "animations"]
+- !private ["So14NSSecureCodingP", "backgroundColor"]
+- !private ["So14NSSecureCodingP", "black"]
+- !private ["So14NSSecureCodingP", "bounds"]
+- !private ["So14NSSecureCodingP", "cgColor"]
+- !private ["So14NSSecureCodingP", "contentsScale"]
+- !private ["So14NSSecureCodingP", "cornerRadius"]
+- !private ["So14NSSecureCodingP", "createOpacityAnimation"]
+- !private ["So14NSSecureCodingP", "createScaleAnimation"]
+- !private ["So14NSSecureCodingP", "duration"]
+- !private ["So14NSSecureCodingP", "fromValue"]
+- ["So14NSSecureCodingP", "init"]
+- !private ["So14NSSecureCodingP", "initialPulseScale"]
+- !private ["So14NSSecureCodingP", "kCAMediaTimingFunctionDefault"]
+- !private ["So14NSSecureCodingP", "keyTimes"]
+- !private ["So14NSSecureCodingP", "nextPulseAfter"]
+- !private ["So14NSSecureCodingP", "numberOfPulses"]
+- !private ["So14NSSecureCodingP", "opacity"]
+- !private ["So14NSSecureCodingP", "position"]
+- !private ["So14NSSecureCodingP", "radius"]
+- !private ["So14NSSecureCodingP", "repeatCount"]
+- !private ["So14NSSecureCodingP", "setupAnimationGroup"]
+- !private ["So14NSSecureCodingP", "timingFunction"]
+- !private ["So14NSSecureCodingP", "toValue"]
+- !private ["So14NSSecureCodingP", "values"]
+- ["So14NSSecureCodingP", ""]
+- !private ["So8NSStringC", "init"]
+- ["s7NumericP", "infinity"]
+- !private ["So9OS_objectC", "async"]
+- !private ["So9OS_objectC", "global"]
+- !private ["So9OS_objectC", "main"]
+- ["10TrackerGPS7PulsingC", "CAAnimationGroup"]
+- ["10TrackerGPS7PulsingC", "CABasicAnimation"]
+- ["10TrackerGPS7PulsingC", "CAKeyframeAnimation"]
+- !private ["10TrackerGPS7PulsingC", "CAMediaTimingFunction"]
+- ["10TrackerGPS7PulsingC", "CGFloat"]
+- ["10TrackerGPS7PulsingC", "CGPoint"]
+- !private ["10TrackerGPS7PulsingC", "CGRect"]
+- !private ["10TrackerGPS7PulsingC", "DispatchQoS"]
+- !private ["10TrackerGPS7PulsingC", "DispatchQueue"]
+- ["10TrackerGPS7PulsingC", "Float"]
+- ["10TrackerGPS7PulsingC", "NSCoder"]
+- !private ["10TrackerGPS7PulsingC", "NSNumber"]
+- ["10TrackerGPS7PulsingC", "TimeInterval"]
+- !private ["10TrackerGPS7PulsingC", "UIColor"]
+- !private ["10TrackerGPS7PulsingC", "UIScreen"]
+- !private ["10TrackerGPS7PulsingC", "add"]
+- ["10TrackerGPS7PulsingC", "animationDuration"]
+- ["10TrackerGPS7PulsingC", "animationGroup"]
+- !private ["10TrackerGPS7PulsingC", "backgroundColor"]
+- !private ["10TrackerGPS7PulsingC", "bounds"]
+- !private ["10TrackerGPS7PulsingC", "contentsScale"]
+- !private ["10TrackerGPS7PulsingC", "cornerRadius"]
+- ["10TrackerGPS7PulsingC", "createOpacityAnimation"]
+- ["10TrackerGPS7PulsingC", "createScaleAnimation"]
+- ["10TrackerGPS7PulsingC", "deinit"]
+- ["10TrackerGPS7PulsingC", "init"]
+- ["10TrackerGPS7PulsingC", "initialPulseScale"]
+- !private ["10TrackerGPS7PulsingC", "kCAMediaTimingFunctionDefault"]
+- ["10TrackerGPS7PulsingC", "nextPulseAfter"]
+- ["10TrackerGPS7PulsingC", "numberOfPulses"]
+- !private ["10TrackerGPS7PulsingC", "opacity"]
+- !private ["10TrackerGPS7PulsingC", "position"]
+- ["10TrackerGPS7PulsingC", "radius"]
+- ["10TrackerGPS7PulsingC", "setupAnimationGroup"]
+- !private ["8Dispatch0A3QoSV0B6SClassO", "default"]
+- !private ["s26RangeReplaceableCollectionP", "init"]
+- !private ["s8SequenceP", "init"]
+- ["s13SignedNumericP", "infinity"]
+- !private ["s12StaticStringV", "init"]
+- ["s10StrideableP", "infinity"]
+- !private ["SS", "init"]
+- !private ["s14StringProtocolP", "init"]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s20TextOutputStreamableP", "init"]
+- !private ["So7UIColorC", "black"]
+- !private ["So7UIColorC", "cgColor"]
+- !private ["So8UIScreenC", "main"]
+- !private ["So8UIScreenC", "scale"]
+- !private ["So18UITraitEnvironmentP", "main"]
+- !private ["So18UITraitEnvironmentP", "scale"]
+- !private ["s23_BidirectionalIndexableP", "init"]
+- ["s15_CVarArgAlignedP", "infinity"]
+- ["s22_CVarArgPassedAsDoubleP", "infinity"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- ["s33_ExpressibleByBuiltinFloatLiteralP", "infinity"]
+- ["s35_ExpressibleByBuiltinIntegerLiteralP", "infinity"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s26_ExpressibleByColorLiteralP", "black"]
+- !private ["s26_ExpressibleByColorLiteralP", "cgColor"]
+- !private ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- !private ["s10_IndexableP", "init"]
+- !private ["s14_IndexableBaseP", "init"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "CAAnimationGroup"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "CABasicAnimation"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "CAKeyframeAnimation"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "CAMediaTimingFunction"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "CGRect"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "DispatchQoS"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "DispatchQueue"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "Float"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "NSNumber"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "UIColor"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "UIScreen"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "add"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "animationDuration"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "animationGroup"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "animations"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "async"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "backgroundColor"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "black"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "bounds"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "cgColor"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "contentsScale"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "cornerRadius"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "createOpacityAnimation"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "createScaleAnimation"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "duration"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "fromValue"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "global"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "initialPulseScale"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "kCAMediaTimingFunctionDefault"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "keyTimes"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "main"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "nextPulseAfter"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "numberOfPulses"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "opacity"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "position"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "radius"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "repeatCount"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "scale"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "setupAnimationGroup"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "timingFunction"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "toValue"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "values"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- ["s21_ObjectiveCBridgeableP", "infinity"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s26_RangeReplaceableIndexableP", "init"]
+- ["s11_StrideableP", "infinity"]
+- !private ["s16_SwiftStringViewP", "init"]
+depends-nominal:
+- !private "s23BidirectionalCollectionP"
+- "s19BinaryFloatingPointP"
+- "So8CAActionP"
+- "So11CAAnimationC"
+- "So16CAAnimationGroupC"
+- !private "So16CABasicAnimationC"
+- !private "So19CAKeyframeAnimationC"
+- "So7CALayerC"
+- "So13CAMediaTimingP"
+- !private "So21CAMediaTimingFunctionC"
+- !private "So19CAPropertyAnimationC"
+- !private "SC6CGRectV"
+- "s7CVarArgP"
+- !private "s10CollectionP"
+- "s10ComparableP"
+- "s28CustomDebugStringConvertibleP"
+- "s29CustomPlaygroundQuickLookableP"
+- "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- "s9DecodableP"
+- !private "So14DispatchObjectC"
+- !private "8Dispatch0A3QoSV"
+- !private "So13DispatchQueueC"
+- "s9EncodableP"
+- "s9EquatableP"
+- !private "s27ExpressibleByBooleanLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- "s25ExpressibleByFloatLiteralP"
+- "s27ExpressibleByIntegerLiteralP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- "Sf"
+- "s13FloatingPointP"
+- "s8HashableP"
+- "6Eureka18InputTypeInitiableP"
+- "s25LosslessStringConvertibleP"
+- !private "s10MirrorPathP"
+- "So8NSCodingP"
+- "So9NSCopyingP"
+- !private "So21NSItemProviderReadingP"
+- !private "So21NSItemProviderWritingP"
+- !private "So16NSMutableCopyingP"
+- !private "So8NSNumberC"
+- "So8NSObjectC"
+- "So16NSObjectProtocolP"
+- "So14NSSecureCodingP"
+- !private "So8NSStringC"
+- "s7NumericP"
+- !private "So9OS_objectC"
+- "10TrackerGPS7PulsingC"
+- !private "8Dispatch0A3QoSV0B6SClassO"
+- !private "s26RangeReplaceableCollectionP"
+- !private "s8SequenceP"
+- "s13SignedNumericP"
+- !private "s12StaticStringV"
+- "s10StrideableP"
+- !private "SS"
+- !private "s14StringProtocolP"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
+- !private "So7UIColorC"
+- !private "So8UIScreenC"
+- !private "So18UITraitEnvironmentP"
+- !private "s23_BidirectionalIndexableP"
+- "s15_CVarArgAlignedP"
+- "s22_CVarArgPassedAsDoubleP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- "s33_ExpressibleByBuiltinFloatLiteralP"
+- "s35_ExpressibleByBuiltinIntegerLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s26_ExpressibleByColorLiteralP"
+- !private "s33_ExpressibleByStringInterpolationP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- !private "s10_IndexableP"
+- !private "s14_IndexableBaseP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "s21_ObjectiveCBridgeableP"
+- !private "s26_RangeReplaceableIndexableP"
+- "s11_StrideableP"
+- !private "s16_SwiftStringViewP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
+- "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/build/Debug-iphonesimulator/Eureka/Eureka.framework/Modules/Eureka.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreLocation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/MapKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Headers/FIRInstanceID.h"
+- "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Headers/FirebaseInstanceID.h"
+- "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/build/Debug-iphonesimulator/Eureka/Eureka.framework/Headers/Eureka-umbrella.h"
+- "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRMutableData.h"
+- "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRUserMetadata.h"
+- "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Headers/FIRSnapshotMetadata.h"
+- "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDatabaseReference.h"
+- "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Headers/FIRCollectionReference.h"
+- "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Headers/FIRDocumentReference.h"
+- "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Headers/FIRDocumentChange.h"
+- "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuthAPNSTokenType.h"
+- "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDataEventType.h"
+- "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/Pods/FirebaseCore/Frameworks/FirebaseCore.framework/Headers/FirebaseCore.h"
+- "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Headers/FIRFirestore.h"
+- "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Headers/FirebaseFirestore.h"
+- "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDatabase.h"
+- "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FirebaseDatabase.h"
+- "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/Pods/Firebase/Core/Sources/Firebase.h"
+- "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuthUIDelegate.h"
+- "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics+AppDelegate.h"
+- "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Headers/FIRFieldValue.h"
+- "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRServerValue.h"
+- "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Headers/FIRWriteBatch.h"
+- "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Headers/FIRFieldPath.h"
+- "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuth.h"
+- "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FirebaseAuth.h"
+- "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuthCredential.h"
+- "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRPhoneAuthCredential.h"
+- "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/Pods/FirebaseCore/Frameworks/FirebaseCore.framework/Headers/FIRLoggerLevel.h"
+- "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FirebaseAuthVersion.h"
+- "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Headers/FIRListenerRegistration.h"
+- "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/Pods/FirebaseCore/Frameworks/FirebaseCore.framework/Headers/FIRConfiguration.h"
+- "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRConfiguration.h"
+- "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/Pods/FirebaseCore/Frameworks/FirebaseCore.framework/Headers/FIRAnalyticsConfiguration.h"
+- "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalyticsConfiguration.h"
+- "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Headers/FIRTransaction.h"
+- "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRUserInfo.h"
+- "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAdditionalUserInfo.h"
+- "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/Pods/FirebaseCore/Frameworks/FirebaseCore.framework/Headers/FIRApp.h"
+- "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRApp.h"
+- "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIROAuthProvider.h"
+- "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRGitHubAuthProvider.h"
+- "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRGoogleAuthProvider.h"
+- "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRPhoneAuthProvider.h"
+- "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRFacebookAuthProvider.h"
+- "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIREmailAuthProvider.h"
+- "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRTwitterAuthProvider.h"
+- "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRUser.h"
+- "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics.h"
+- "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FirebaseAnalytics.h"
+- "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRParameterNames.h"
+- "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIREventNames.h"
+- "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRUserPropertyNames.h"
+- "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRActionCodeSettings.h"
+- "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Headers/FIRFirestoreSettings.h"
+- "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/Pods/FirebaseCore/Frameworks/FirebaseCore.framework/Headers/FIROptions.h"
+- "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIROptions.h"
+- "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Headers/FIRSetOptions.h"
+- "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Headers/FIRFirestoreErrors.h"
+- "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuthErrors.h"
+- "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/build/Debug-iphonesimulator/Eureka/Eureka.framework/Headers/Eureka-Swift.h"
+- "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuthDataResult.h"
+- "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRTransactionResult.h"
+- "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Headers/FIRGeoPoint.h"
+- "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDataSnapshot.h"
+- "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Headers/FIRDocumentSnapshot.h"
+- "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Headers/FIRQuerySnapshot.h"
+- "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalyticsSwiftNameSupport.h"
+- "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Headers/FIRQuery.h"
+- "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDatabaseQuery.h"
+- "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/Pods/Firebase/Core/Sources/module.modulemap"
+- "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Modules/module.modulemap"
+- "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/build/Debug-iphonesimulator/Eureka/Eureka.framework/Modules/module.modulemap"
+- "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/Pods/FirebaseCore/Frameworks/FirebaseCore.framework/Modules/module.modulemap"
+- "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Modules/module.modulemap"
+- "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Modules/module.modulemap"
+- "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Modules/module.modulemap"
+- "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Modules/module.modulemap"
+interface-hash: "7221257fa9ea091fc5aa0d482b710f1b"

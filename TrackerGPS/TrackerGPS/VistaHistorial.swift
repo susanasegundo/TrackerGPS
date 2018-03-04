@@ -14,7 +14,7 @@ import Firebase
 
 class VistaHistorial: UITableViewController {
 
-    let secciones = ["Fecha Inicio     Actividad"]
+    let secciones = ["Fecha Inicio           Actividad"]
     //array de recorridos para mostrar en la tabla
     var recorridos = [Recorrido]()
     var idUsuario: String!
@@ -73,7 +73,7 @@ class VistaHistorial: UITableViewController {
         //dar el formato separado de Fecha y Hora para poner en cada label
         let fe = recorridos[indexPath.row].fechaInicio
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd-MM-yyyy"
+        dateFormatter.dateFormat = "dd-MM-yyyy       HH:mm:ss"
         let myString = dateFormatter.string(from: fe)
         dateFormatter.dateFormat = "HH:mm:ss"
         let updatedString = dateFormatter.string(from: fe)

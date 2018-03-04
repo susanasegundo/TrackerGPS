@@ -1,0 +1,14 @@
+version: "Apple Swift version 4.0.3 (swiftlang-900.0.74.1 clang-900.0.39.2)"
+options: "b5dafd390cd568ccd19b5d9305bc5a7e"
+build_time: [1520207441, 626858000]
+inputs:
+  "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/TrackerGPS/VistaInicio.swift": [1520201199, 0]
+  "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/TrackerGPS/AppDelegate.swift": [1519926188, 0]
+  "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/TrackerGPS/VistaEleccion.swift": [1519926188, 0]
+  "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/TrackerGPS/VistaDetalles.swift": [1519926188, 0]
+  "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/TrackerGPS/Recorrido.swift": [1519926188, 0]
+  "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/TrackerGPS/VistaMapa.swift": [1520201199, 0]
+  "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/TrackerGPS/VistaMarchando.swift": [1520201199, 0]
+  "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/TrackerGPS/VistaHistorial.swift": [1520207439, 0]
+  "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/TrackerGPS/CeldaHistorial.swift": [1519926188, 0]
+  "/Users/susana/Documents/Git/TrackerGPS/TrackerGPS/TrackerGPS/animacionPulsar.swift": [1519926188, 0]
