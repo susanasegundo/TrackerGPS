@@ -152,13 +152,7 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="82" height="81"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fecha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Iy-Pf-qDe">
-                                                            <rect key="frame" x="0.0" y="0.0" width="82" height="38"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fecha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zdD-NU-XIP" userLabel="Fecha dos">
-                                                            <rect key="frame" x="0.0" y="43" width="82" height="38"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="82" height="81"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -166,9 +160,6 @@
                                                     </subviews>
                                                     <constraints>
                                                         <constraint firstItem="2Iy-Pf-qDe" firstAttribute="leading" secondItem="iWC-hN-kXw" secondAttribute="leading" id="9sX-js-ivi"/>
-                                                        <constraint firstAttribute="trailing" secondItem="zdD-NU-XIP" secondAttribute="trailing" id="Xvj-wm-44f"/>
-                                                        <constraint firstAttribute="bottom" secondItem="zdD-NU-XIP" secondAttribute="bottom" id="bz5-d5-DdH"/>
-                                                        <constraint firstItem="zdD-NU-XIP" firstAttribute="leading" secondItem="iWC-hN-kXw" secondAttribute="leading" id="yHJ-er-4ml"/>
                                                         <constraint firstAttribute="trailing" secondItem="2Iy-Pf-qDe" secondAttribute="trailing" id="z3G-po-uCF"/>
                                                     </constraints>
                                                 </stackView>
@@ -230,7 +221,6 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="botonVer" destination="rpA-yk-t7B" id="1On-au-wHO"/>
-                                    <outlet property="fecha2Label" destination="zdD-NU-XIP" id="x3Z-xv-6r4"/>
                                     <outlet property="fechaLabel" destination="2Iy-Pf-qDe" id="bdN-Yt-XJR"/>
                                     <outlet property="tipoLabel" destination="IUH-AB-zEx" id="eo0-w3-pq3"/>
                                 </connections>

@@ -14,7 +14,7 @@ import Firebase
 
 class VistaHistorial: UITableViewController {
 
-    let secciones = ["Fecha Inicio           Actividad"]
+    let secciones = ["Fecha             Hora           Actividad"]
     //array de recorridos para mostrar en la tabla
     var recorridos = [Recorrido]()
     var idUsuario: String!
@@ -24,11 +24,14 @@ class VistaHistorial: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //por cada documento dentro de recorridos, mire la id, y la compare con la id del usuario actual.
-        db.collection("recorridos").whereField("id", isEqualTo: idUsuario).getDocuments() { (querySnapshot, err) in
-            if let err = err{
-                print("Error congiendo el documento: \(err)")
-            }else{
 
+        //Para poder hacer un order by, hay que hacer un indice en la base de datos si no, no es posible
+        
+        db.collection("recorridos").whereField("id", isEqualTo:idUsuario).order(by: "fechaInicio").getDocuments() { (querySnapshot, err) in
+            if let err = err{
+                print("Error cogiendo el documento: \(err)")
+            }else{
+                
                 for document in querySnapshot!.documents {
                     //por cada documento coger sus valores y guardarlos en variables para mas tarde
                     let documento = document.data()
@@ -73,20 +76,17 @@ class VistaHistorial: UITableViewController {
         //dar el formato separado de Fecha y Hora para poner en cada label
         let fe = recorridos[indexPath.row].fechaInicio
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd-MM-yyyy       HH:mm:ss"
+        dateFormatter.dateFormat = "dd-MM-yyyy    HH:mm:ss"
         let myString = dateFormatter.string(from: fe)
-        dateFormatter.dateFormat = "HH:mm:ss"
-        let updatedString = dateFormatter.string(from: fe)
+        _ = dateFormatter.string(from: fe)
         //escribir en cada una de ellas
         cell.fechaLabel.text = myString
-        cell.fecha2Label.text = updatedString
         cell.tipoLabel.text = recorridos[indexPath.row].tipo
         
        cell.botonVer.isEnabled = false
         
         return cell
     }
-    
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return secciones[section]
     }
